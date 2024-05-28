@@ -1,136 +1,47 @@
 import tkinter as tk
 import subprocess
-from pythonosc import udp_client
 
 main = tk.Tk()
 var = 0  
 
-def send_message(receiver_ip, receiver_port, address, message):
-try:
-  # Create an OSC client to send messages
-  client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+def volume_change(x):
+    global var
+    if x == 1:
+        var = var + 1
+    else:
+        var = var - 1
 
-  # Send an OSC message to the receiver
-  client.send_message(address, message)
-
-  print("Message sent successfully.")
- except:
-  print("Message not sent")
-
-
-#def volume_change(x):
- #   global var
-  #  if x == 1:
- #       var = var + 1
- #   else:
-   #     var = var - 1
-
-   # print(var)
-
-# Marker 1 defined as First Marker for the team. In reality , Markler Num = Allocated Snapshot11
+    print(var)
 
 def on1():
     print("Snapshot 11")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41251" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
 
 def on2():
     print("Snapshot 12")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41252" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
-
 
 def on3():
     print("Snapshot 13")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41253" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
-
 
 def on4():
     print("Snapshot 14")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41254" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
-
 
 def on5():
     print("Snapshot 15")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41255" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
 
 def on6():
     print("Snapshot 16")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41256" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
 
 def on7():
     print("Snapshot 17")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41257" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
 
 def on8():
     print("Snapshot 18")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41258" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
 
 def on9():
     print("Snapshot 19")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41259" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
 
 def on10():
     print("Snapshot 20")
-    PI_A_ADDR = "192.168.254.162"  # wlan ip
-    PORT = 8000
-
-    addr = "/action/41260" # Jump to Marker One
-    msg = float(1) # Trigger TRUE Value
-
-    send_message(PI_A_ADDR, PORT, addr, msg)
 
 
 
