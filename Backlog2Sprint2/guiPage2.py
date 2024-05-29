@@ -6,16 +6,17 @@ main = tk.Tk()
 var = 0  
 
 def send_message(receiver_ip, receiver_port, address, message):
-try:
-  # Create an OSC client to send messages
-  client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+    try:
+      # Create an OSC client to send messages
+      client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
 
-  # Send an OSC message to the receiver
-  client.send_message(address, message)
+      # Send an OSC message to the receiver
+      client.send_message(address, message)
 
-  print("Message sent successfully.")
- except:
-  print("Message not sent")
+      print("Message sent successfully.")
+     except:
+      
+      print("Message not sent")
 
 
 #def volume_change(x):
