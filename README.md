@@ -13,7 +13,7 @@
 ## Overview
 Project S.O.N.I.C (Sensory Observation Ninja Immersive Challenge) is an experiential/exploratory initiative designed to blend the ancient "ninja training techniques" with modern technologies. Students are to design a range of interactive stations that simulate ninja training scenarios, designed to test and enhance your listening abilities, reaction times and strategic thinking. The stations include:
 1. Stealth Walking
-2. **The Blindfold Challenge** ( Team A)
+2. **The Blindfold Challenge** (Team A)
 3. Art Of Hearing
 4. Reaction Training
 5. Memory Sequence
@@ -46,3 +46,14 @@ One Person on MIDI Controller guiding  , 'Trainer'<br>
   <li>Multi Participant Game. One Blindfolded, the other guiding via a MIDi Controller</li>
 </ul>
 </details>
+
+## Tutorials:
+
+
+
+
+
+## References and Sources:
+**[Huats Club - rpistarterkit](https://github.com/huats-club/rpistarterkit)** - Configuring and preparing a new Raspberry Pi
+- **[Huats Club - oscstarterkit](https://github.com/huats-club/oscstarterkit)** - Introductions to Python Open Sound Control for AV
+- **[Huats Club - mts_sensor_cookbook](https://github.com/huats-club/mts_sensor_cookbook)** - Basics for Sensors, MIDI Controller.
