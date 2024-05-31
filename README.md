@@ -23,15 +23,26 @@ Project S.O.N.I.C (Sensory Observation Ninja Immersive Challenge) is an experien
 </p>
 
 ## Station 2 - The Blindfold Challenge
-The Blindfold CHallenge requires Player 1 to be blindfolded, competely
+The “Blindfold Challenge”, where your vision takes a 
+backseat and your ears take the lead<br>
+Participants are blindfolded and must navigate 
+through a course guided solely by sounds.<br>
+Participants must avoid contacting obstacles 
+placed throughout the course for a successful 
+attempt.<br>
+<br>
+<br>
+One Person  Blindfolded , 'Ninaja Cadet'<br>
+One Person on MIDI Controller guiding  , 'Trainer'<br>
+
 
 <details open>
 <summary>
   Features
 </summary>
 <ul>
-  <li>L-ISA to create a soundscape of incoming projectiles.</li>
-  <li>Players are to touch/press buttons with the correct direction.</li>
-  <li>Station to measure accuracy and reaction time, best result wins!</li>
+  <li>L-ISA to provide auditory cues for navigation.</li>
+  <li>Incoporated Lighting as the 'Maze' , Walking through the shadows of th light
+  <li>Multi Participant Game. One Blindfolded, the other guiding via a MIDi Controller</li>
 </ul>
 </details>
