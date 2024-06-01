@@ -52,6 +52,7 @@ Please follow these instructions.
 - **[Huats Club - rpistarterkit](https://github.com/huats-club/rpistarterkit)**
 
 ## Tutorials:
+- **[Backlog 1 Sprint 1](./Backlog%201%20Sprint%201/Backlog1Sprint1.md)** - OSC Installation on Raspberry Pi, Creation of a UI via tkinter, OSC Communication to various devices
 
 
 
