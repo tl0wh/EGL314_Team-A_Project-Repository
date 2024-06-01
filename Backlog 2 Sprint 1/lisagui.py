@@ -1,5 +1,29 @@
+# Huats 2023 oscstarterkit
+# This python script demonstrate controlling Reaper (Jump to Marker 1) using a Raspberry Pi through the
+# OSC messaging protocol
+##from pythonosc import udp_client
+
 import tkinter as tk 
 import subprocess
+
+
+def send_message(receiver_ip, receiver_port, address, message):
+	try:
+		# Create an OSC client to send messages
+		client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+
+		# Send an OSC message to the receiver
+		client.send_message(address, message)
+
+		print("Message sent successfully.")
+	except:
+		print("Message not sent")
+
+# FOR INFO: IP address and port of the receiving Raspberry Pi
+PI_A_ADDR = "192.168.254.162"		# wlan ip
+PORT = 8000
+
+
 
 
 main = tk.Tk()
@@ -7,11 +31,17 @@ var = 0
 
 
 def function1():
-    subprocess.call(["python", "marker_1.py"])
+    addr = "/action/40161" # Jump to Marker One
+    msg = float(1) # Trigger TRUE Value
+
+    send_message(PI_A_ADDR, PORT, addr, msg)
     
     
 def function2():
-    subprocess.call(["python", "marker_2.py"])
+    addr = "/action/40162" # Jump to Marker two
+    msg = float(1) # Trigger TRUE Value
+
+    send_message(PI_A_ADDR, PORT, addr, msg)
     
 
 def function3():
@@ -19,16 +49,26 @@ def function3():
     exit()
 
 def function4():
-    subprocess.call(["python", "marker_3.py"])
+    addr = "/action/40163" # Jump to Marker three
+    msg = float(1) # Trigger TRUE Value
+
+    send_message(PI_A_ADDR, PORT, addr, msg)
     
+  
     
 def function5():
-    subprocess.call(["python", "marker_4.py"])
+    addr = "/action/40164" # Jump to Marker Four
+    msg = float(1) # Trigger TRUE Value
+
+    send_message(PI_A_ADDR, PORT, addr, msg)
+    
    
     
 def function6():
-    subprocess.call(["python", "play_stop.py"])
-#   subprocess.call(["python", "marker_4.py"])
+    addr = "/action/40044" # Play/Stop Function in Reaper
+    msg = float(1) # Trigger TRUE Value
+
+    send_message(PI_A_ADDR, PORT, addr, msg)
 
     
     
