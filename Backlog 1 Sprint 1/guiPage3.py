@@ -1,8 +1,30 @@
+from pythonosc import udp_client, osc_message_builder
+import time
 import tkinter as tk 
 import subprocess
 
+def send_message(receiver_ip, receiver_port, address, message):
+	try:
+		# Create an OSC client to send messages
+		client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+
+		# Send an OSC message to the receiver
+		client.send_message(address, message)
+
+		print("Message sent successfully.")
+	except:
+		print("Message not sent")
+
+
+#change the below values
+if __name__ == "__main__":
+    LAPTOP_IP = "192.168.0.100"		# send to laptop w grandMA3
+    PORT = 8888                  # laptop w grandMA3 port number
+    addr = "/gma3/cmd"
 
 main = tk.Tk()
+title = tk.Label(main, text="MA3 Control", font="40")
+title.grid(row=0, column=0, columnspan=200, pady=30)
 
 def Home():
     subprocess.call(["python", "guipage1.py"])
@@ -13,22 +35,24 @@ def exitbtn():
 
 def seq1():
     print("This is sequence 1")
-    subprocess.call(["python", "./grandma3.py"])
+    send_message(LAPTOP_IP, PORT, addr, "FaderMaster Page 1.201 At 100")
 
 def seq2():
     print("This is sequence 2")
-    subprocess.call(["python", "./grandma2.py"])
-title = tk.Label(main, text="MA3 Control", font="40")
-title.grid(row=0, column=0, columnspan=200, pady=30)
+    send_message(LAPTOP_IP, PORT, addr, "FaderMaster Page 1.202 At 100")
 
 def gobtn():
-    subprocess.call(["python", "./grandmaGo.py"])
+     print("This is the Go+ Button")
+     send_message(LAPTOP_IP, PORT, addr, "Go+ Executor")
     
 def clrbtn():
-    subprocess.call(["python", "./grandmaclr.py"])
-    
+    print("This is the Clear Button")
+    send_message(LAPTOP_IP, PORT, addr, "Clear")
+
 def pbtn():
-    subprocess.call(["python", "./grandmaPause.py"])
+     print("This is the Pause Button")
+     send_message(LAPTOP_IP, PORT, addr, "Pause Executor")
+
     
 
 #sequence
