@@ -32,7 +32,7 @@ placed throughout the course for a successful
 attempt.<br>
 <br>
 <br>
-One Person  Blindfolded , 'Ninaja Cadet'<br>
+One Person  Blindfolded , 'Ninja Cadet'<br>
 One Person on MIDI Controller guiding  , 'Trainer'<br>
 
 
