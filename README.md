@@ -62,7 +62,8 @@ Please follow these instructions.
 - **[Huats Club - oscstarterkit](https://github.com/huats-club/oscstarterkit)** - Introductions to Python Open Sound Control for AV
 - **[Huats Club - mts_sensor_cookbook](https://github.com/huats-club/mts_sensor_cookbook)** - Basics for Sensors, MIDI Controller.
 
-
+## Credits
+Team A Would like to specially thank, **Mr. Fu YongWei** from **Nanyang Polytechnic** for overseeing our project phase and supplying us with base-source codes.
 
 ## Contributors to this Project:
 [//]: contributor-faces
