@@ -8,7 +8,7 @@
  </p>
 
  # Summary:
-In this sprint of Backlog 1 , here anre the following tasks:
+In this sprint of Backlog 1 , here are the following tasks:
 
 
 1.  Preparing & Installing OSC on Raspberry Pi
