@@ -61,3 +61,12 @@ Please follow these instructions.
 - **[Huats Club - rpistarterkit](https://github.com/huats-club/rpistarterkit)** - Configuring and preparing a new Raspberry Pi
 - **[Huats Club - oscstarterkit](https://github.com/huats-club/oscstarterkit)** - Introductions to Python Open Sound Control for AV
 - **[Huats Club - mts_sensor_cookbook](https://github.com/huats-club/mts_sensor_cookbook)** - Basics for Sensors, MIDI Controller.
+
+
+
+## Contributors to this Project:
+[//]: contributor-faces
+<a href="https://github.com/tl0wh"><img src="https://avatars.githubusercontent.com/u/169418560?v=4" title="hugh-jessel" width="50" height="50"></a>
+<a href="https://github.com/AhSohs"><img src="https://avatars.githubusercontent.com/u/167286697?v=4" title="Anestesiaa-0512" width="50" height="50"></a>
+<a href="https://github.com/srylqwerty"><img src="https://avatars.githubusercontent.com/u/167286875?v=4" title="isaacgsm" width="50" height="50"></a>
+<a href="https://github.com/dariensiew"><img src="https://avatars.githubusercontent.com/u/167286885?v=4" title="FinnishAnya" width="50" height="50"></a>
