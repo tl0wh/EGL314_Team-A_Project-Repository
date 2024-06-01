@@ -32,7 +32,7 @@ placed throughout the course for a successful
 attempt.<br>
 <br>
 <br>
-One Person  Blindfolded , 'Ninaja Cadet'<br>
+One Person  Blindfolded , 'Ninja Cadet'<br>
 One Person on MIDI Controller guiding  , 'Trainer'<br>
 
 
@@ -41,9 +41,9 @@ One Person on MIDI Controller guiding  , 'Trainer'<br>
   Features
 </summary>
 <ul>
-  <li>L-ISA to provide auditory cues for navigation.</li>
-  <li>Incoporated Lighting as the 'Maze' , Walking through the shadows of th light
-  <li>Multi Participant Game. One Blindfolded, the other guiding via a MIDi Controller</li>
+  <li>L-Acoustics' L-ISA to provide auditory cues for navigation.</li>
+  <li>GrandMA3 Incoporated Lighting as the 'Maze' , Walking through the shadows of the light</li>
+  <li>Multi Participant Game. One Blindfolded, the other guiding via a Korg NanoKontrol2 MIDi Controller</li>
 </ul>
 </details>
 
