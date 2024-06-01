@@ -93,8 +93,8 @@ pip3 install python-osc==1.8.1
 </details>
 
 ## Pi to Pi Communication via OSC:
-
-Sample code is located under the `tutorial1` folder. 
+<details><summary><b>Show Pi-Pi</b></summary>
+Sample code is located under the `Backlog 1 Sprint 1` folder. 
 
 ## System Flowchart 
 
@@ -162,5 +162,5 @@ python3 osc_server.py
 python3 osc_client.py
 ```
 <br><br>
-
+</details>
 
