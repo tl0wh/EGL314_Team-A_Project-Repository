@@ -413,7 +413,7 @@ sc1.config(height = 3, width = 9)
 
 #exit
 
-exitbtn = tk.Button(main, text ="Exit", font="20", command=exitbtn, background='orange')
+exitbtn = tk.Button(main, text ="Exit", font="20", command=exitbtn, background='orange' )
 
 exitbtn.grid(row=7, column=15, columnspan=2, pady=50, padx=50)
 
