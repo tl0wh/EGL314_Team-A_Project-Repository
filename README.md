@@ -1,6 +1,9 @@
 <h1 align="center">
   Project S.O.N.I.C - The Blindfold Challenge
 </h1>
+<h1 align="center">
+  <img src="./asset/nyp.png" width = 350px height=170px>
+</h1>
 
 <p align="center">
   <i align="center">Train to be a ninja with the use of modern technologies 🥷</i>

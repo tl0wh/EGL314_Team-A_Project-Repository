@@ -1,7 +1,7 @@
 # Huats 2023 oscstarterkit
 # This python script demonstrate controlling Reaper (Jump to Marker 1) using a Raspberry Pi through the
 # OSC messaging protocol
-##from pythonosc import udp_client
+from pythonosc import udp_client
 
 import tkinter as tk 
 import subprocess
