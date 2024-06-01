@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <i align="center">Train to be a ninja with the use of modern technologies 🥷</i>
+  <i align="center">Train to be a ninja with the use of modern technologies</i>
 </p>
 
 <p align="center">
