@@ -11,21 +11,21 @@
 In this sprint of Backlog 1 , here anre the following tasks:
 
 
-1.  Preparing Raspberry Pi
-2.  Install OSC on Raspberry Pi
+1.  Preparing & Installing OSC on Raspberry Pi
+2.  Raspberry Pi to Raspberry Pi OSC Communication
 3.  Create a UI via tkinter
-4.  Raspberry Pi to Raspberry Pi OSC Communication
-5.  OSC Communication to GrandMA3 & Yamaha QL1
+4.  OSC Communication to GrandMA3 & Yamaha QL1
  
 
 
-## Preppign Paspberry Pi:
-Please follow the steps in the attached repository:
+## Prepping Raspberry Pi:
+<details><summary><b>Show Preparation</b></summary>
 **[Huats Club - rpistarterkit](https://github.com/huats-club/rpistarterkit)**
 
 <br>
 After you are done setting up, Please follow these steps to create a Virtual Environment:
-## Installing a virtual environment
+
+## Prepping Virtual Environment:
 
 1. To install **Python Virtualenv**
 
@@ -90,3 +90,77 @@ Python-osc provides a convenient way to work with OSC in Python by offering func
 ```
 pip3 install python-osc==1.8.1
 ```
+</details>
+
+## Pi to Pi Communication via OSC:
+
+Sample code is located under the `tutorial1` folder. 
+
+## System Flowchart 
+
+```mermaid
+graph LR
+
+A[RPi B<br>osc_client.py] --> B[RPi A<br>osc_server.py]
+```
+
+### Instruction
+ 
+1.  Identify the IP address of the Raspberry Pi Server, in this particular case, **RPi A**. Type the following command on the terminal of **RPi A**.
+```
+ifconfig
+```
+
+If you are using **Ethernet Connection**, identify the *IP address* under the `eth0` section.
+
+If you are using **WiFi Connection**, identify the *IP address* under the `wlan0` section. 
+
+2. Edit the server IP address `receiver_ip` (*line 4*) in `osc_server.py` file (**RPi A**)
+
+Open and edit `osc_server.py` (please make sure you are in the correct directory)
+```
+nano osc_server.py
+```
+
+Enter corresponding **IP Address** retrieved in **Step 1** into `line 4`. Below is an example
+```
+receiver_ip = "192.168.1.100"
+```
+
+Save and exit **nano editor**
+```
+Crtl + O
+Crtl + X
+```
+
+3. Edit the desination IP address `PI_A_ADDR` (*line 16*) in `osc_client.py` file (**RPi B**).
+
+Open and edit `osc_client.py` 
+```
+nano osc_client.py
+```
+
+Enter corresponding **IP Address** retrieved in **Step 1** into `line 16`. Below is an example
+```
+PI_A_ADDR = "192.168.1.100"
+```
+
+Save and exit **nano editor**
+```
+Crtl + O
+Crtl + X
+```
+
+4. Execute `osc_server.py` 
+```
+python3 osc_server.py
+```
+
+
+5. Excute `osc_client.py` 
+```
+python3 osc_client.py
+```
+<br><br>
+
+
