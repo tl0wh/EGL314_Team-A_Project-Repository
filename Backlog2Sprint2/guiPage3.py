@@ -1,5 +1,5 @@
 import tkinter as tk 
-from pythonosc import udp_client, osc_message_builder
+#from pythonosc import udp_client, osc_message_builder
 import time
 
 main = tk.Tk()
@@ -225,12 +225,12 @@ def seq32():
 
 #sequence
 seq23 = tk.Button(main, text="Murugan Light", font="20", command=seq23 , background="Orange")
-seq24 = tk.Button(main, text="Intro", font="20", command=seq24, background= "Orange")
-seq25 = tk.Button(main, text="Map", font="20", command=seq25, background= "Orange")
-seq26 = tk.Button(main, text="Level 2", font="20", command=seq26, background= "Orange")
-seq27 = tk.Button(main, text="Sequence", font="20", command=seq27, background= "Orange")
-seq28 = tk.Button(main, text="Clear#2", font="20", command=seq28, background= "Orange")
-seq29 = tk.Button(main, text="Outro", font="20", command=seq29, background= "Orange")
+seq24 = tk.Button(main, text="Intro+SS 11", font="20", command=seq24, background= "Orange")
+seq25 = tk.Button(main, text="Map+SS 15", font="20", command=seq25, background= "Orange")
+seq26 = tk.Button(main, text="Lvl2+SS 16", font="20", command=seq26, background= "Orange")
+seq27 = tk.Button(main, text="Lose+SS 14", font="20", command=seq27, background= "Orange")
+seq28 = tk.Button(main, text="Clear#2+SS 13", font="20", command=seq28, background= "Orange")
+seq29 = tk.Button(main, text="Outro+SS 12", font="20", command=seq29, background= "Orange")
 seq30 = tk.Button(main, text="smoke#2", font="20", command=seq30, background= "Orange")
 seq31 = tk.Button(main, text="Sequence 31", font="20", command=seq31, background= "Orange")
 seq32 = tk.Button(main, text="Sequence 32", font="20", command=seq32, background= "Orange")
@@ -281,7 +281,7 @@ pause.config(height=3, width=6)
 
 clear = tk.Button(main, text ="Clear", font="20",background='orange', command =clear)
 
-clear.grid(row=8, column=0, columnspan=2, pady=10, padx=10)
+clear.grid(row=7, column=4, columnspan=6, pady=10, padx=10)
 
 clear.config(height=3, width=6)
 
@@ -292,7 +292,7 @@ clear.config(height=3, width=6)
 
 offbtn = tk.Button(main, text ="Off Sequence", font="20", command=off, background='orange' )
 
-offbtn.grid(row=8, column=3, columnspan=2, pady=10, padx=50)
+offbtn.grid(row=7, column=1, columnspan=3, pady=10, padx=50)
 
 offbtn.config(height=3, width=10)
 
@@ -400,7 +400,7 @@ on10.grid(row=6, column=15, pady=20, padx=10)
 on10.config(height=6, width=12)
 
 # Scenes
-sc1 =  tk.Button(main , text ="Play/Pause",font = "20", command=sce10, background='orange')
+sc1 =  tk.Button(main , text ="Play/Pause",font = "20",  background='orange')
 
 
 
