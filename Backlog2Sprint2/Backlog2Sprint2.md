@@ -10,10 +10,13 @@ The resources in this tutorial are tested with the following hardware
 ```mermaid
 graph LR
 A[Raspberry Pi] <--LAN--> B[Router]
-B <--LAN--> C[grandMA3 on PC<br>use this IP Address(1)]
-B <--LAN--> C[Reaper on PC<br> use this IP Address(2)]
+B <--LAN--> C[grandMA3 on PC<br>use this IP Address1]
+B <--LAN--> D[Reaper on PC<br> use this IP Address2]
 ```
 ## Configuration guide for grandMA3 onPC
+Please download [grandMA3](https://www.malighting.com/downloads/products/grandma3/) on PC if you haven't
+<br>
+<br>
 
 Please refer to the **setup guide** for instructions specific to configuring **OSC control** on the **grandMA3 onPC software**.
 
@@ -25,20 +28,7 @@ For more instruction in **OSC for grandMA3**, please refer to this [link](https:
 
 
 ## Configuration (Reaper)
-
-1. Go to **Reaper Preference** using the shortcut `Ctrl+P`
-2. Navigate to **Control/OSC/Web** (green box)
-3. Click on `Add` to configure a new OSC device 
-
-![alt text](diagram/reaper_preference.png)
-
-*Reaper Preference Windows*
-
-4. Configure new **OSC Device** as shown in the picture below
-
-![alt text](diagram/reaper_osc_device.png)
-
-
+Follow The tutorial for OSC to Reaper [Here](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%202%20Sprint%201/Backlog2Sprint1.md)
 
 
 ## Installation / Operation
@@ -49,7 +39,7 @@ In this example, we will be using a **Raspberry Pi** to control **grandMA3 on PC
 mkdir team_ctrl
 ```
 
-2. Copy the respective python file into the folder `~/grandma`
+2. Copy the respective python file into the folder `~/team_ctrl`
 ```
 guiPage1.py
 guiPage2.py
@@ -59,8 +49,8 @@ guiPage3.py
 
 3. Edit the **IP Address(1) and Port Number(1)** (`line 18 and 19`) of the **computer** running **grandMA3 on PC** in `guiPage3.py`
 ```
-LAPTOP_IP = "192.168.0.100"		# send to laptop w grandMA3
-PORT = 8000                     # laptop w grandMA3 port number
+LAPTOP_IP = "192.168.0.100"		
+PORT = 8000                    
 ```
 
  4. Edit the **IP Address(1)**I of the **Laptop (running Reaper)**in the respective python files
@@ -72,27 +62,15 @@ PI_A_ADDR = "10.10.10.10"
 
 
 
-## Identifying OSC Commands in Reaper
+5. Identifying OSC Commands in Reaper
 
-2 weeks ago
-
-L-ISA documentation
-In this tutorial, we are using the *Action List* in **Reaper**. In Reaper, the *Action List* is a comprehensive catalogue of commands and functions that you can execute within the softwaer. It covers basic features such as playback controls to complex scripting operations. 
-2 weeks ago
-
-added reaper
-
-To view *Action List* navigate to `Actions -> Show action list...`
-
-Look out for `Command ID` (right click to unhide)
-
-![alt text](diagram/reaper_action_list.png)
-
-*Reaper Action List*
+- Refer Back to [Backlog 2 Sprint 1](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%202%20Sprint%201/Backlog2Sprint1.md) for OSC Configuration
+<br>
 
 
 
-5. Execute `guiPage1.py`. If the file is executed successfully, The Stored Sequence on the MA will Go.
+
+6. Execute `guiPage1.py`. If the file is executed successfully, The Stored Sequence on the MA will Go , marker on Reaper will also jump accordingly.
 ```
 python3 guiPage1.py
 ```

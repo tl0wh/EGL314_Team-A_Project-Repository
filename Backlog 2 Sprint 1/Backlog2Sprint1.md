@@ -14,14 +14,16 @@ In this sprint of Backlog 1 , here are the following tasks:
 1.  Preparing and Configuring Reaper for OSC
 2.  Pi to Reaper Communication
 
-# Reaper Side Configuration
-<details><summary><b>Show Reaper Preparation</b></summary>
-
 # System Flowchart
 ```mermaid
 graph LR
 A[Raspberry Pi] --LAN/WiFi--> B[Reaper<br>DAW]
 ```
+
+
+
+# Reaper Side Configuration
+<details><summary><b>Show Reaper Preparation & OSC Configuration</b></summary>
 
 
 # Installing Reaper:
