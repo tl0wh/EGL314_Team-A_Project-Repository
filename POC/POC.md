@@ -24,6 +24,10 @@ J[Raspberry Pi B]--OSC-->F[L-ISA Controller]
 ```
 ## Asset Files:
 There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Digital Audio Workstation Reaper(.rpp) ShowFiles<br> Located in Asset_Files in [POC](./Asset_Files/)
+<br>
+<br>
+As for Audio files, It is all located inside [Audio_files\Sfx](./Audio_Files/) Folder<br>
+To be imported into Reaper
 
 ### Required Software:
 - [Reaper DAW](https://www.reaper.fm/download.php)
