@@ -259,7 +259,7 @@ def seq28():
     PI_A_ADDR = "192.168.254.30"		# wlan ip
     PORT = 8000
 
-    addr = "/action/41253s" # Jump to Marker
+    addr = "/action/41253" # Jump to Marker
     msg = float(1) # Trigger TRUE Value
     addr2 = "/action/1007" # Play/Stop Function in Reaper
     msg = float(1) # Trigger TRUE Value

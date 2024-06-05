@@ -15,15 +15,15 @@ L[Master Laptop] --Running--> B[Reaper<br>DAW]
 L--Running--> C[MA3<br> Lighting Console]
 C --LAN SACN--> D[Hanging Lights<br>Ayrton Mistral , Magicblade , Minipanel<br> Showline ePar]
 B[Reaper<br>DAW] --ASIO , LAN DanteVSC --> E[L-ISA Processor]
-E--MetaData--> F[L-ISA Controller]
+E--Spatial MetaData--> F[L-ISA Controller]
 F --LAN Dante--> G[Mixer<br>Yamaha QL1]
 G--LAN Dante--> H[Amplifier<br> Yamaha XMV8140D]
-H -- Speaker Cable to 4 Way Terminal Block--> I[Speakers<br> Yamaha VXS5]
+H -- Speaker Cable to 4 Way EuroBlock Terminal Block--> I[Speakers<br> Yamaha VXS5]
 K[MIDI Controller<br>Korg Nano Controller]--MiniUSB to USB A <br> & MIDI-->J[Raspberry Pi B]
 J[Raspberry Pi B]--OSC-->F[L-ISA Controller] 
 ```
 ## Asset Files:
-There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Dightal Audio Workstation Reaper(.rpp) ShowFiles<br> Located in Asset_Files in [POC](./Asset_Files/)
+There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Digital Audio Workstation Reaper(.rpp) ShowFiles<br> Located in Asset_Files in [POC](./Asset_Files/)
 
 ### Required Software:
 - [Reaper DAW](https://www.reaper.fm/download.php)
@@ -35,6 +35,20 @@ There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Co
 - [LoopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)(Needed to Link Reaper Timecode into L-ISA)
 
 # Configuration
+## Setting Up L-ISA 
+1. Open L-ISA Processor
+<img src="./diagrams/pro-config.png" >
+2. Under `Audio Device Type` Select `ASIO` (Yellow)
+3. Under `Output` Select `Dante VSC`
+4. Open up L-ISA Controller
+5. Go to `Processors` (Top Right Green )
+<img src="./diagrams/ctrl-config-bfr.png" >
+6. Go to `Main` , Select your `Laptop Name` (Yellow)
+7. Select `Connect` (Red)
+<img src="./diagrams/ctrl-config-ok.png" >
+8. After Connecting successfully, there will be a green arrow (Green)
+9. Note that at the extreme top right , `Main` will change from a `Cross (Error)` to a `Green Dot (Online)`
+
 
 ## Linking MIDI From Reaper to L-ISA Controller:
 1. Launch LoopMIDI
@@ -69,4 +83,49 @@ There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Co
 <img src="./diagrams/moving.png" >
 
 ## -Timecode Configuration is Now Complete-
+
+## Configuring & Using MIDI Controller into L-ISA Controller Via OSC:
+### L-ISA Side
+1. Open L-ISA Controller
+2. Navigate to `Sources` ( Red Top Left )
+<img src="./diagrams/Sources-OSC.png" >
+3. Find the Source that is being controlled by the MIDI Controller.(In this case , 1)
+4. Look for `Ext OSC` ( Red )
+5. Select the `P , W , D , E , S` attribute ( Green ) 
+-----------------------------------------------------
+6. Go To `Settings` (Green)
+7. Select `OSC` Tab ( Yellow )
+8. Select `New` ( Orange )
+9. Enter `Device Name` , `IP Address` & `Port Number` ( Blue )
+<img src="./diagrams/L-ISA-OSC.png" >
+
+10. Make sure `Receive From` & `Levels Control` is On.
+
+### Raspberry Pi Configuration
+1. Create a file directory (in this example we will call the folder `MIDI`)
+```
+mkdir MIDI
+```
+
+2. Copy the respective python file into the folder `~/MIDIl`
+```
+fader.py
+```
+
+
+3. Edit the **IP Address and Port Number** (`line 43 and 44`) of the **computer** running **L-ISA Controller** in `fader.py`
+```
+LAPTOP_IP = "192.168.254.30"		
+PORT = 8880                
+```
+( Note that L-ISA Controller Port Number is Always `8880`) 
+
+
+4. Execute `fader.py`. If the file is executed successfully; Turning the Configured Knob on the MIDI Controller will make the Source `pan` in L-ISA Controller
+```
+python3 fader.py
+```
+
+## -MIDI Controller to L-ISA Configuration is Now Complete-
+
 
