@@ -48,6 +48,7 @@ There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Co
 <img src="./diagrams/ctrl-config-ok.png" >
 8. After Connecting successfully, there will be a green arrow (Green)
 9. Note that at the extreme top right , `Main` will change from a `Cross (Error)` to a `Green Dot (Online)`
+## Setting up of L-ISA is Done
 
 
 ## Linking MIDI From Reaper to L-ISA Controller:
