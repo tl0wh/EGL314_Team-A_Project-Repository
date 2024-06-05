@@ -64,11 +64,11 @@ There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Co
 3. Navigate to MIDI
 4. Under  , Enable Output for your LoopMidi Profile
 <img src="./diagrams/rpmidi.png" >
-5. Select the Timecode Track in the MasterFile
+5. Select the Timecode Track in the MasterFile<br>
 6. Navigate to the Fader at the `bottom` Corresponding to your source.
 <img src="./diagrams/fader.png" >
 7. Click the button Circled in Green
-<img src="./diagrams/routing.png" >
+<img src="./diagrams/Routing.png" >
 8. Navigate to `MIDI Output Device`
 9. Select the MIDI Profile you have just created in `LoopMIDI`
 
