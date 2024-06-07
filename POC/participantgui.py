@@ -62,7 +62,7 @@ def start():
         LAPTOP_IP = "192.168.254.229"        # send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
-
+##
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 24")
 
 def Replay():
