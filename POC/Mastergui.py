@@ -52,7 +52,7 @@ def send_message3(receiver_ip, receiver_port, address, message):
 def off(): #off sequence MA3
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -64,7 +64,7 @@ def off(): #off sequence MA3
 def go(): #Go MA3
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -78,7 +78,7 @@ def go(): #Go MA3
 def pause(): #Pause MA3
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -92,7 +92,7 @@ def pause(): #Pause MA3
 def clear(): #clear MA3
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -129,7 +129,7 @@ def exitbtn():
 def seq23():
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -166,7 +166,7 @@ def seq24(): #intro
 
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -195,7 +195,7 @@ def seq25():
 
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -223,7 +223,7 @@ def seq26():
 
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -248,7 +248,7 @@ def seq27():  #lose
 
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -276,7 +276,7 @@ def seq28():
 
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -304,7 +304,7 @@ def seq29():
 
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -319,7 +319,7 @@ def seq29():
 def seq30():
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -334,7 +334,7 @@ def seq30():
 def seq31():
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
@@ -350,7 +350,7 @@ def seq31():
 def seq32():
     #MA3
     if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.30"		# send to laptop w grandMA3
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
