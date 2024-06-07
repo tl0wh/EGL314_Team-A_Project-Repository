@@ -133,6 +133,13 @@ def seq23():
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+
+        PI_A_ADDR = "192.168.254.30"		# wlan ip
+        PORT = 8000
+        addr = "/action/41251" # Jump to Marker
+        msg = float(1)
+
+        send_message1(PI_A_ADDR, PORT, addr, msg)
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 23")
 
     print("This is sequence 23")
@@ -149,7 +156,7 @@ def seq24(): #intro
     PI_A_ADDR = "192.168.254.30"		# wlan ip
     PORT = 8000
 
-    addr = "/action/41251" # Jump to Marker
+    addr = "/action/41257" # Jump to Marker
     msg = float(1) # Trigger TRUE Value
     addr2 = "/action/1007" # Play/Stop Function in Reaper
     msg = float(1) # Trigger TRUE Value
