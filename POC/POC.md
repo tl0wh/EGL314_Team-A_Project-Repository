@@ -14,13 +14,13 @@ A[Raspberry Pi A ]<--LAN/WiFi + OSC--> L[Master Laptop]
 L[Master Laptop] --Running--> B[Reaper<br>DAW]
 L--Running--> C[MA3<br> Lighting Console]
 C --LAN SACN--> D[Hanging Lights<br>Ayrton Mistral , Magicblade , Minipanel<br> Showline ePar]
-B[Reaper<br>DAW] --ASIO , LAN DanteVSC --> E[L-ISA Processor]
-E--Spatial MetaData--> F[L-ISA Controller]
-F --LAN Dante--> G[Mixer<br>Yamaha QL1]
-G--LAN Dante--> H[Amplifier<br> Yamaha XMV8140D]
+B[Reaper<br>DAW] <--ASIO , LAN DanteVSC --> E[L-ISA Processor]
+E<--Spatial MetaData--> F[L-ISA Controller]
+F <--LAN Dante--> G[Mixer<br>Yamaha QL1]
+G<--LAN Dante--> H[Amplifier<br> Yamaha XMV8140D]
 H -- Speaker Cable to 4 Way EuroBlock Terminal Block--> I[Speakers<br> Yamaha VXS5]
 K[MIDI Controller<br>Korg Nano Controller]--MiniUSB to USB A <br> & MIDI-->J[Raspberry Pi B]
-J[Raspberry Pi B]--OSC-->F[L-ISA Controller] 
+J[Raspberry Pi B]<--OSC-->F[L-ISA Controller] 
 ```
 ## Asset Files:
 There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Digital Audio Workstation Reaper(.rpp) ShowFiles<br> Located in Asset_Files in [POC](./Asset_Files/)
@@ -39,6 +39,9 @@ To be imported into Reaper
 - [LoopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)(Needed to Link Reaper Timecode into L-ISA)
 
 # Configuration
+## Settinh up for Reaper and grandMA3
+- Tutorial for [Reaper](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%202%20Sprint%201/Backlog2Sprint1.md)
+- Tutorial for [grandMA3](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%201%20Sprint%201/Backlog1Sprint1.md)
 ## Setting Up L-ISA 
 1. Open L-ISA Processor
 <img src="./diagrams/pro-config.png" >
