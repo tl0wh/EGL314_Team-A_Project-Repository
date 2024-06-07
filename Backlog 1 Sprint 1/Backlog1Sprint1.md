@@ -101,7 +101,7 @@ Sample code is located under the `Backlog 1 Sprint 1` folder.
 ```mermaid
 graph LR
 
-A[RPi B<br>osc_client.py] --> B[RPi A<br>osc_server.py]
+A[RPi B<br>osc_client.py] <--LAN/WIFI--> B[RPi A<br>osc_server.py]
 ```
 
 ### Instructions

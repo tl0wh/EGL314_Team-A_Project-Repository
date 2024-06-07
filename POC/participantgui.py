@@ -49,7 +49,7 @@ def start():
     PI_A_ADDR = "192.168.254.30"        # wlan ip
     PORT = 8000
 
-    addr = "/action/41251" # Jump to Marker
+    addr = "/action/41257" # Jump to Marker
     msg = float(1) # Trigger TRUE Value
     addr2 = "/action/1007" # Play/Stop Function in Reaper
     msg = float(1) # Trigger TRUE Value
@@ -71,7 +71,7 @@ def Replay():
     PI_A_ADDR = "192.168.254.30"        # wlan ip
     PORT = 8000
 
-    addr = "/action/41251" # Jump to Marker
+    addr = "/action/41257" # Jump to Marker
     msg = float(1) # Trigger TRUE Value
     addr2 = "/action/1007" # Play/Stop Function in Reaper
     msg = float(1) # Trigger TRUE Value
