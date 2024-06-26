@@ -13,15 +13,21 @@ main = tk.Tk()
 var = 0  
 
 def on():
-    subprocess 
+    subprocess.call(["python", "test_AllOn.py"])
+
+def off():
+    subprocess.call(["python", "test_AllOff.py"])
+
+def seq():
+    subprocess.call(["python", "test.py"])
 
 
 
-on = tk.Button(main, text="Murugan Light", font="20", command=on , background="Orange")
+on = tk.Button(main, text="On", font="20", command=on , background="Orange")
 
-off = tk.Button(main, text="Intro+SS 11", font="20", command=off, background= "Orange")
+off = tk.Button(main, text="Off", font="20", command=off, background= "Orange")
 
-seq = tk.Button(main, text="Map+SS 15", font="20", command=seq, background= "Orange")
+seq = tk.Button(main, text="Seq", font="20", command=seq, background= "Orange")
 
 on.grid(row=1, column=0, columnspan=2, pady=10, padx=10)
 
