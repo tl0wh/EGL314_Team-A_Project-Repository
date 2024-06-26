@@ -17,7 +17,7 @@ In this sprint of Backlog 1 , here are the following tasks:
 # System Flowchart
 ```mermaid
 graph LR
-A[Raspberry Pi] --LAN/WiFi--> B[Reaper<br>DAW]
+A[Raspberry Pi] <--LAN/WiFi--> B[Reaper<br>DAW]
 ```
 
 
