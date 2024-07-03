@@ -332,6 +332,19 @@ def seq30():
 
 
 def seq31():
+    # REAPER
+    PI_A_ADDR = "192.168.254.30"		# wlan ip
+    PORT = 8000
+
+    addr = "/action/41255" # Jump to Marker
+    msg = float(1) # Trigger TRUE Value
+    addr2 = "/action/1007" # Play/Stop Function in Reaper
+    msg = float(1) # Trigger TRUE Value
+
+    send_message1(PI_A_ADDR, PORT, addr, msg)
+    send_message3(PI_A_ADDR, PORT, addr2, msg)
+
+
     #MA3
     if __name__ == "__main__":
         LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
@@ -391,7 +404,7 @@ seq29 = tk.Button(main, text="Outro+SS 12", font="20", command=seq29, background
 
 seq30 = tk.Button(main, text="smoke#2", font="20", command=seq30, background= "Orange")
 
-seq31 = tk.Button(main, text="Sequence 31", font="20", command=seq31, background= "Orange")
+seq31 = tk.Button(main, text="Demo Stage", font="20", command=seq31, background= "Orange")
 
 seq32 = tk.Button(main, text="Sequence 32", font="20", command=seq32, background= "Orange")
 
