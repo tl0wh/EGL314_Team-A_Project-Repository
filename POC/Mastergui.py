@@ -88,7 +88,7 @@ def pause(): #Pause MA3
 
 
     print("pause")
-    
+
     if __name__ == "__main__":
         LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
@@ -492,7 +492,7 @@ Go.config(height=3, width=6)
 
 
 
-pause = tk.Button(main, text ="Pause", font="20",background='orange' ,command =pause)
+pause = tk.Button(main, text ="Off Everyt", font="20",background='orange' ,command =pause)
 
 
 
