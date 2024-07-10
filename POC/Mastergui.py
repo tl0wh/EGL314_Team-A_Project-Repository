@@ -77,15 +77,25 @@ def go(): #Go MA3
 
 def pause(): #Pause MA3
     #MA3
+    
+    PI_A_ADDR = "192.168.254.30"		# wlan ip
+    PORT = 8000
+
+    addr2 = "/action/40044" # Play/Stop Function in Reaper
+    msg = float(1) # Trigger TRUE Value
+
+    send_message3(PI_A_ADDR, PORT, addr2, msg)
+
+
+    print("pause")
+    
     if __name__ == "__main__":
         LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
-        send_message2(LAPTOP_IP, PORTS, addrs, "Pause")
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
 
-
-    print("pause")
 
 
 
