@@ -23,7 +23,8 @@ y = int(0)
 x = int(0)
 addr = "/print"
 
-for i in range(0<x<21):        ## + Sign ON
+
+for i in range(0<x<=8):        ## + Sign ON
     msg = [
         "11, 1, 1",
         "11, 2, 1",
@@ -36,7 +37,7 @@ for i in range(0<x<21):        ## + Sign ON
         ]
     x +=1
 
-for i in range(0<x<21):        ## + Sign OFF
+for i in range(9<=x<=16):        ## + Sign OFF
     msg = [
         "11, 1, 0",
         "11, 2, 0",
@@ -49,7 +50,7 @@ for i in range(0<x<21):        ## + Sign OFF
         ]
     x +=1
 
-for i in range (20<x<30): # X Shape ON
+for i in range (17<=x<24): # X Shape ON
     msg =[
         "12, 2, 1",
 	    "12, 1, 1",
@@ -62,7 +63,7 @@ for i in range (20<x<30): # X Shape ON
     ]
     x +=1
 
-for i in range (20<x<30): # X Shape OFF`        `
+for i in range (25<=x<=32): # X Shape OFF`        `
     msg =[
         "12, 2, 0",
 	    "12, 1, 0",
@@ -78,7 +79,7 @@ for i in range (20<x<30): # X Shape OFF`        `
 
     
 
-for i in range (20<x<30):# Star Shape ON
+for i in range (33<=x<=42):# Star Shape ON
     msg =[
         "11, 1, 1",
 	    "11, 2, 1",
@@ -94,7 +95,7 @@ for i in range (20<x<30):# Star Shape ON
     ]
     x +=1
 
-for i in range (20<x<30):# Star Shape OFF
+for i in range (43<=x<=52):# Star Shape OFF
     msg =[
         "11, 1, 0",
 	    "11, 2, 0",
@@ -111,8 +112,9 @@ for i in range (20<x<30):# Star Shape OFF
     x +=1
 
 while y <1000:
-	send_message(PI_A_ADDR, PORT, addr, msg[y])
-	y +=1
-	time.sleep(d_sec)
+    
+    send_message(PI_A_ADDR, PORT, addr, msg[y])
+    y +=1
+    time.sleep(d_sec)
 
 

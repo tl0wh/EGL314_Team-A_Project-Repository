@@ -49,6 +49,7 @@ msg = [
 	
 	]
 while y <1000:
+	str(msg[y]) 
 	send_message(PI_A_ADDR, PORT, addr, msg[y])
 	y +=1
 	time.sleep(0.1)
