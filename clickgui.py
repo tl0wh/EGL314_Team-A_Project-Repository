@@ -60,6 +60,7 @@ def show():
 
     print("Playing Freebird")
     subprocess.call(["python", "LaserShowHardCode.py"])
+	subprocess.call(["python", "./Neopixel/beatdance.py"])
 
       
     
