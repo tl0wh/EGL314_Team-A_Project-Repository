@@ -1,94 +1,92 @@
-import tkinter as tk 
-
-#from pythonosc import udp_client, osc_message_builder
-
-from pythonosc import udp_client, osc_message_builder
-import time 
+import tkinter as tk
 import subprocess
+from pythonosc import udp_client
 
 def send_message1(receiver_ip, receiver_port, address, message):
-	try:
-		# Create an OSC client to send messages
-		client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
-
-		# Send an OSC message to the receiver
-		client.send_message(address, message)
-
-		print("Reaper sent successfully.")
-	except:
-		print("Reaper not sent")
+    try:
+        client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+        client.send_message(address, message)
+        print("Reaper message sent successfully.")
+    except Exception as e:
+        print(f"Error sending message to Reaper: {e}")
 
 def send_message3(receiver_ip, receiver_port, address, message):
-	try:
-		# Create an OSC client to send messages
-		client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+    try:
+        client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+        client.send_message(address, message)
+        print("Message sent successfully.")
+    except Exception as e:
+        print(f"Error sending message: {e}")
 
-		# Send an OSC message to the receiver
-		client.send_message(address, message)
+def send_color(receiver_ip, receiver_port, r, g, b):
+    try:
+        client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+        client.send_message("/color", [r, g, b])
+        print("Color message sent successfully.")
+    except Exception as e:
+        print(f"Error sending color message: {e}")
 
-		print("Message sent successfully.")
-	except:
-		print("Message not sent")
+def send_brightness(receiver_ip, receiver_port, brightness):
+    try:
+        client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+        client.send_message("/brightness", [brightness])
+        print("Brightness message sent successfully.")
+    except Exception as e:
+        print(f"Error sending brightness message: {e}")
 
+def send_off_message(receiver_ip, receiver_port):
+    try:
+        client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+        client.send_message("/off", [])
+        print("Off message sent successfully.")
+    except Exception as e:
+        print(f"Error sending off message: {e}")
 
+def run_subprocesses():
+    subprocess.Popen(["python", "LaserShowHardCode.py"])
+    subprocess.Popen(["python", "beatdance.py"])
+    print("Subprocesses started.")
+
+def show():
+    PI_A_ADDR = "192.168.254.30"    # Reaper's IP address
+    PORT = 8000
+
+    addr = "/marker/61"  # Jump to Marker
+    msg = float(1)  # Trigger TRUE Value
+    addr2 = "/action/1007"  # Play/Stop Function in Reaper
+    msg2 = float(1)  # Trigger TRUE Value
+
+    send_message1(PI_A_ADDR, PORT, addr, msg)
+    send_message3(PI_A_ADDR, PORT, addr2, msg2)
+
+    print("Playing Freebird")
+
+    run_subprocesses()
+
+def on():
+    subprocess.Popen(["python", "test_AllOn.py"])
+
+def off():
+    subprocess.Popen(["python", "test_AllOff.py"])
+
+def seq():
+    subprocess.Popen(["python", "test.py"])
 
 main = tk.Tk()
 
-var = 0  
+on_button = tk.Button(main, text="On", font="20", command=on, background="Orange")
+off_button = tk.Button(main, text="Off", font="20", command=off, background="Orange")
+seq_button = tk.Button(main, text="Seq", font="20", command=seq, background="Orange")
+show_button = tk.Button(main, text="Show", font="20", command=show, background="Orange")
 
-def on():
-    subprocess.call(["python", "test_AllOn.py"])
+on_button.grid(row=1, column=0, columnspan=2, pady=10, padx=10)
+off_button.grid(row=1, column=3, columnspan=2, pady=10, padx=10)
+seq_button.grid(row=2, column=0, columnspan=2, pady=10, padx=10)
+show_button.grid(row=2, column=3, columnspan=2, pady=10, padx=10)
 
-def off():
-    subprocess.call(["python", "test_AllOff.py"])
-
-def seq():
-    subprocess.call(["python", "test.py"])
-
-def show():
-     # REAPER
-    PI_A_ADDR = "192.168.254.30"		# wlan ip
-    PORT = 8000
-
-    addr = "/marker/61" # Jump to Marker
-    msg = float(1) # Trigger TRUE Value
-    addr2 = "/action/1007" # Play/Stop Function in Reaper
-    msg = float(1) # Trigger TRUE Value
-
-    send_message1(PI_A_ADDR, PORT, addr, msg)
-    send_message3(PI_A_ADDR, PORT, addr2, msg)
-
-    print("Playing Freebird")
-    subprocess.call(["python", "LaserShowHardCode.py"])
-	subprocess.call(["python", "./Neopixel/beatdance.py"])
-
-      
-    
-
-
-
-on = tk.Button(main, text="On", font="20", command=on , background="Orange")
-
-off = tk.Button(main, text="Off", font="20", command=off, background= "Orange")
-
-seq = tk.Button(main, text="Seq", font="20", command=seq, background= "Orange")
-
-show = tk.Button(main, text="Show", font="20", command=show, background= "Orange")
-
-on.grid(row=1, column=0, columnspan=2, pady=10, padx=10)
-
-off.grid(row=1, column=3, columnspan=2, pady=10, padx=10)
-
-seq.grid(row=2, column=0, columnspan=2, pady=10, padx=10)
-
-show.grid(row=2, column=3, columnspan=2, pady=10, padx=10)
-
-on.config(height=6, width=12)
-
-off.config(height=6, width=12)
-
-seq.config(height=6, width=12)
-
-show.config(height=6, width=12)
+on_button.config(height=6, width=12)
+off_button.config(height=6, width=12)
+seq_button.config(height=6, width=12)
+show_button.config(height=6, width=12)
 
 main.mainloop()

@@ -1,7 +1,7 @@
 from pythonosc import udp_client
 import time 
 
-bpm = 62
+bpm = 69
 d_sec = 30 / bpm
 
 def send_message(receiver_ip, receiver_port, address, message):
