@@ -149,6 +149,7 @@ def seq23():
         addr = "/action/41251" # Jump to Marker
         msg = float(1)
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message1(PI_A_ADDR, PORT, addr, msg)
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 23")
 
@@ -180,6 +181,7 @@ def seq24(): #intro
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 24")
 
 
@@ -209,6 +211,7 @@ def seq25():
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 25")
 
 
@@ -237,6 +240,7 @@ def seq26():
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 26")
 
     print("This is sequence 26")
@@ -262,6 +266,7 @@ def seq27():  #lose
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 27")
 
 
@@ -290,6 +295,7 @@ def seq28():
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 28")
 
 
@@ -318,6 +324,7 @@ def seq29():
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 29")
 
 
@@ -333,6 +340,7 @@ def seq30():
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 30")
 
 
@@ -361,6 +369,7 @@ def seq31():
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 31")
 
 
@@ -377,6 +386,7 @@ def seq32():
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 32")
 
 

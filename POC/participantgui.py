@@ -41,7 +41,6 @@ def send_message3(receiver_ip, receiver_port, address, message):
 # GUI
 def start():
     print("This is the start button")
-    # Hide the start button and show the other two buttons
     starts.place_forget()
     Replays.place(relx=0.5, rely=0.25, anchor=tk.CENTER)
     Startg.place(relx=0.5, rely=0.75, anchor=tk.CENTER)
@@ -112,9 +111,9 @@ main = tk.Tk()
 main.geometry("600x400") # size of window
 
 # Buttons
-starts = tk.Button(main, text="Start ▶", font=("Helvetica", 24), command=start, background="Orange")
-Replays = tk.Button(main, text="Replay ⟳", font=("Helvetica", 24), command=Replay, background="Orange")
-Startg = tk.Button(main, text="Start The Game! 🥷🏿", font=("Helvetica", 24), command=Startgame, background="Orange")
+starts = tk.Button(main, text="Start ▶", font=("Helvetica", 60), command=start, background="Orange")
+Replays = tk.Button(main, text="Replay ⟳", font=("Helvetica", 30), command=Replay, background="Orange")
+Startg = tk.Button(main, text="Start The Demo! 🥷🏿", font=("Helvetica", 30), command=Startgame, background="Orange")
 
 # Initial Button placement
 starts.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
