@@ -13,5 +13,5 @@ PI_A_ADDR = "192.168.254.242"  # Change to your RPi's IP address
 PORT = 2005
 
 send_color(PI_A_ADDR, PORT, 0, 0, 255)  # change to ur choice of colour (255,255,255)
-send_brightness(PI_A_ADDR, PORT, 0.3)   # change brightness (0-1)
+send_brightness(PI_A_ADDR, PORT, 0.1)   # change brightness (0-1)
 print("test")
