@@ -17,13 +17,11 @@ def send_off_message(receiver_ip, receiver_port):
 PI_A_ADDR = "192.168.254.242"  # Change to your RPi's IP address
 PORT = 2005
 
-# Calculate the delay between each beat
 bpm = 62
 beat_delay = 60 / bpm
-total_duration = 30  # seconds
+total_duration = 30  
 end_time = time.time() + total_duration
 
-# Define the sequence of colors
 colors = [
     (255, 0, 0),   # Red
     (0, 255, 0),   # Green
