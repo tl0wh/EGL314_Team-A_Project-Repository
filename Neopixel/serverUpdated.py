@@ -26,8 +26,8 @@ def set_color(strip, color, brightness):
 
 # Brightness (0.4 max)
 def set_brightness(strip, brightness):
-    if brightness > 0.4:
-        brightness = 0.4
+    if brightness > 0.1:
+        brightness = 0.1
     strip.brightness = brightness
     strip.show()
 
@@ -41,7 +41,7 @@ def handle_osc_message(addr, *args):
                 r, g, b = args
                 color = (r, g, b)
                 # Default brightness if not provided
-                brightness = 1.0
+                brightness = 0.1
                 set_pixel_color(pixels_strip1, pixel_index, color, brightness)
         except (ValueError, IndexError) as e:
             print(f"Invalid pixel index or arguments: {e}")
@@ -50,13 +50,13 @@ def handle_osc_message(addr, *args):
             r, g, b = args
             color = (r, g, b)
             # Default brightness if not provided
-            brightness = 0.4
+            brightness = 0.1
             set_color(pixels_strip1, color, brightness)
     elif addr == "/brightness":
         if len(args) == 1:
             brightness = float(args[0])
-            if brightness > 0.4:
-                brightness = 0.4
+            if brightness > 0.1:
+                brightness = 0.1
             set_brightness(pixels_strip1, brightness)
     elif addr == "/off":
         set_color(pixels_strip1, (0, 0, 0), 0)

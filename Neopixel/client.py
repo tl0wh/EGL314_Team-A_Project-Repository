@@ -31,4 +31,4 @@ NUM_PIXELS = 200  # Change to match the number of NeoPixels on your strip
 
 # Example
 halfhalf(PI_A_ADDR, PORT, NUM_PIXELS)
-send_brightness(PI_A_ADDR, PORT, 1.0)   # Max brightness (0-1) 1 will auto become 0.4
+send_brightness(PI_A_ADDR, PORT, 0.1)   # Max brightness (0-1) 1 will auto become 0.4
