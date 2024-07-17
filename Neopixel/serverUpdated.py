@@ -18,13 +18,13 @@ def set_pixel_color(strip, pixel, color, brightness):
     strip[pixel] = (r, g, b)
     strip.show()
 
-# Function to set the color of the entire strip
+# Color
 def set_color(strip, color, brightness):
     for i in range(num_pixels):
         set_pixel_color(strip, i, color, brightness)
     strip.show()
 
-# Function to handle setting brightness with a maximum of 0.4
+# Brightness (0.4 max)
 def set_brightness(strip, brightness):
     if brightness > 0.4:
         brightness = 0.4
