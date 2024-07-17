@@ -20,7 +20,7 @@ PORT = 2005
 # Calculate the delay between each beat
 bpm = 69
 beat_delay = 30 / bpm
-total_duration = 30  # seconds
+total_duration = 38  # seconds
 end_time = time.time() + total_duration
 
 # Define the sequence of colors
