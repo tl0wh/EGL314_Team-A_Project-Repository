@@ -49,8 +49,8 @@ guiPage3.py
 
 3. Edit the **IP Address(1) and Port Number(1)** (`line 18 and 19`) of the **computer** running **grandMA3 on PC** in `guiPage3.py`
 ```
-LAPTOP_IP = "192.168.0.100"		
-PORT = 8000                    
+LAPTOP_IP = "192.168.254.229"		
+PORT = 8888                    
 ```
 
  4. Edit the **IP Address(1)**I of the **Laptop (running Reaper)**in the respective python files
