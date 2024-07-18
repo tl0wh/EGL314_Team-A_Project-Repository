@@ -87,7 +87,7 @@ main.geometry("600x400") # size of window
 # Buttons
 starts = tk.Button(main, text="Start ▶", font=("Helvetica", 30), command=start, background="Orange")
 Replays = tk.Button(main, text="Replay ⟳", font=("Helvetica", 30), command=Replay, background="Orange")
-Startg = tk.Button(main, text="Start The Demo! 🥷🏿", font=("Helvetica", 30), command=Startgame, background="Orange")
+Startg = tk.Button(main, text="Start The Game! 🥷🏿", font=("Helvetica", 30), command=Startgame, background="Orange")
 label = tk.Label(main, text="", font=("Helvetica", 40))
 
 # Initial Button and Label placement
