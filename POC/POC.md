@@ -39,7 +39,7 @@ To be imported into Reaper
 - [LoopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)(Needed to Link Reaper Timecode into L-ISA)
 
 # Configuration
-## Settinh up for Reaper and grandMA3
+## Setting up for Reaper and grandMA3
 - Tutorial for [Reaper](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%202%20Sprint%201/Backlog2Sprint1.md)
 - Tutorial for [grandMA3](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%201%20Sprint%201/Backlog1Sprint1.md)
 ## Setting Up L-ISA 
@@ -96,7 +96,7 @@ To be imported into Reaper
 ### L-ISA Side
 1. Open L-ISA Controller
 2. Navigate to `Sources` ( Red Top Left )
-<img src="./diagrams/Sources-OSC.png" >
+<img src="./diagrams/Settings.png" >
 3. Find the Source that is being controlled by the MIDI Controller.(In this case , 1)
 4. Look for `Ext OSC` ( Red )
 5. Select the `P , W , D , E , S` attribute ( Green ) 
@@ -134,94 +134,5 @@ PORT = 8880
 python3 fader.py
 ```
 
-5. To control which knob or button you would like to use, change "16" to desired control value
-```
-if msg.control == 16:
-                        print("It works")
-                        send_osc_message(msg.value)
-```
-
-6. To control which attribute, change "/ext/src/1/p" to attribute of choice
-```
-        addr = "/ext/src/1/p"
-```
-
 ## -MIDI Controller to L-ISA Configuration is Now Complete-
 
-## Setting up the Master GUI 
-
-1. Create a new file in Visual Studio Code
-
-2. Copy the respective python file into the new VSC file
-```
-Mastergui.py
-```
-
-##MA3
-3. In the Mastergui.py for the MA3 side, under every #MA3 make sure that the IP address and port is the same as the **computer** running **MA3**
-```
-  #MA3
-    if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
-        PORTS = 8888                     # laptop w grandMA3 port number
-        addrs = "/gma3/cmd"
-```
-
-4. To change the commands of what is executed, change "Off MyRunningSequence" to the command of your choice
-```
-        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
-```
-
-##Reaper
-3. For the Reaperside, in the Mastergui.py change every other IP address and port to the same as the **computer** running **Reaper**
-```
- PI_A_ADDR = "192.168.254.30"		# wlan ip
-```
-
-4. To change the commands of what is executed, change "41255" to the command of your choice
-```
- addr = "/action/41255" # Jump to Marker
-```
-
-5. To start the GUI, run the code in visual studio code
-
-## -MasterGui is Now Complete-
-
-### Setting up the Participant Gui
-
-1. Create a new file in the participant's laptop
-
-2. Copy the respective python file into the new VSC file
-```
-participantgui.py
-```
-
-##MA3
-3. In the Mastergui.py for the MA3 side, under every #MA3 make sure that the IP address and port is the same as the **computer** running **MA3**
-```
-  #MA3
-    if __name__ == "__main__":
-        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
-        PORTS = 8888                     # laptop w grandMA3 port number
-        addrs = "/gma3/cmd"
-```
-
-4. To change the commands of what is executed, change "Off MyRunningSequence" to the command of your choice
-```
-        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
-```
-
-##Reaper
-3. For the Reaperside, in the Mastergui.py change every other IP address and port to the same as the **computer** running **Reaper**
-```
- PI_A_ADDR = "192.168.254.30"		# wlan ip
-```
-
-4. To change the commands of what is executed, change "41255" to the command of your choice
-```
- addr = "/action/41255" # Jump to Marker
-```
-
-5. To start the GUI, run the code in visual studio code
-
-## -Participant Gui is Now Complete-
