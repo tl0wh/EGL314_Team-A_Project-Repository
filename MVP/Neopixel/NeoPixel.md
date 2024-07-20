@@ -10,11 +10,12 @@ Z<--Dupont(F)<-> XLR(F) to XLR(M) to Dupont(M)(Soldered)-->X[Neo Pixel LED Strip
 - Raspberry Pi
 - Neopixel Strip
 - Jumper wires
-- A Laptop
+- XLR Connectors (Optional)
+- Laptop with Python
 
 ## Hardware Connections
 
-<img src="./Neopixel/img/img.jpg" >
+<img src="../diagrams/img.jpg" >
 
 ### Connection
 
