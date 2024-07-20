@@ -75,7 +75,9 @@ J[Raspberry Pi B]<--OSC-->F[L-ISA Controller]
 ```
 
 ## Asset Files:
-There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Dightal Audio Workstation Reaper(.rpp) ShowFiles<br> Located in Asset_Files in [POC](./POC/Asset_Files/)
+There will be the Following Files ;<br> Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Dightal Audio Workstation Reaper(.rpp) ShowFiles<br> 
+Located in Asset_Files in [MVP](./MVP/Asset_Files/)<br>
+Relevant Audio Effetcs are also located in [Audio_Files](./MVP/Audio_Files/)<br>
 
 ### Required Software:
 - [Reaper DAW](https://www.reaper.fm/download.php)

@@ -12,6 +12,18 @@
 </h2>
 In this game , there will be <u><b>2</b> GUIs.</u><br>
 <b>Note that: 1 Laptop has to be deployed for Each GUI</b>
+
+<h2 align="center">
+  System Layout for this Specific Section
+</h2>
+
+```mermaid
+graph LR
+A[Raspberry Pi / Laptop<br> Running <b>Operational</b> GUI] <--WiFi--> B[Reaper<br>DAW]
+A<--WiFi-->C[grandMA3<br>Lighting Colsle]
+D[Raspberry Pi / Laptop<br> Running <b>Participant</b> GUI]<--Wifi-->B
+D<--Wifi-->C 
+```
 <h3>1. Master GUI for Operational Team <br></h3>
 <img src="../diagrams/Master_GUI.png" > <br>
 <h3>2. GUI for Participant<br></h3>
@@ -96,5 +108,64 @@ In this game , there will be <u><b>2</b> GUIs.</u><br>
 ### - In the Ending Page
 <img src = "../diagrams/pgui_end.png"></img>
 
+## --Breakdown of Participant GUI is Now Complete--
+
+### Now We Will look at the Codes behind both GUI Buttons
+
+## Understanding what it does
+* Here is a reference code taken from [Mastergui.py](./Mastergui.py)
+Line 223:
+```
+def seq26():
+
+     # REAPER
+    PI_A_ADDR = "192.168.254.30"		# wlan ip
+    PORT = 8000
+
+    addr = "/action/41256" # Jump to Marker
+    msg = float(1) # Trigger TRUE Value
+    addr2 = "/action/1007" # Play/Stop Function in Reaper
+    msg = float(1) # Trigger TRUE Value
+
+    send_message1(PI_A_ADDR, PORT, addr, msg)
+    send_message3(PI_A_ADDR, PORT, addr2, msg)
 
 
+    #MA3
+    if __name__ == "__main__":
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
+        PORTS = 8888   # laptop w grandMA3 port number
+        addrs = "/gma3/cmd"
+
+
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
+        send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 26")
+
+    print("This is sequence 26")
+```
+### This is how we are able to get 1 button to send OSC Messages to 2 different Softwares<br>
+
+### Important Things to Note / Edit:
+1. In lines as shown below, make sure both the `IP Address` and `Port Number` Reflect in `Reaper`.<br>
+Commands can be changed after the `/action/******`<br>
+A Full Tutorial for Reaper OSC & Commands can be found [here](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%202%20Sprint%201/Backlog2Sprint1.md)<br>
+
+
+```
+#Reaper IP & Port
+PI_A_ADDR = "192.168.254.30"		# wlan ip 
+PORT = 8000
+addr = "/action/41256" # Jump to Marker
+msg = float(1) # Trigger TRUE Value
+```
+
+
+2. In lines as shown below, make sure both the `IP Address` and `Port Number` Reflect in `grandMA3`.<br>
+Fuction can be changed in  `send_message2()`, specifically  `addrs, "ENTER DESIRED MESSAGE"`<br>
+A Full Tutorial for grandMA3 OSC & Commands can be found [here](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog2Sprint2/Setup_For_MA3/GrandMA3_OSC_setupguide.pdf)<br>
+
+```
+ LAPTOP_IP = "192.168.254.229"		
+ PORTS = 8888   # laptop w grandMA3 port number
+ addrs = "/gma3/cmd
+ send_message2(LAPTOP_IP, PORTS, addrs, "Off    MyRunningSequence")
