@@ -169,3 +169,7 @@ A Full Tutorial for grandMA3 OSC & Commands can be found [here](https://github.c
  PORTS = 8888   # laptop w grandMA3 port number
  addrs = "/gma3/cmd
  send_message2(LAPTOP_IP, PORTS, addrs, "Off    MyRunningSequence")
+```
+
+### Therefore, this is how you can edit the codes to perform other command / functions in Reaper / GrandMA3
+##
