@@ -1,5 +1,5 @@
 <h1 align="center">
-  Proof Of Concept 
+  Minimum Viable Product
 </h1>
 
 <p align="center">
@@ -46,7 +46,7 @@ To be imported into Reaper
 - [LoopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)(Needed to Link Reaper Timecode into L-ISA)
 
 # Configuration
-## Setting up for Reaper and grandMA3
+## Setting up for Reaper and grandMA3 (OSC)
 - Tutorial for [Reaper](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%202%20Sprint%201/Backlog2Sprint1.md)
 - Tutorial for [grandMA3](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%201%20Sprint%201/Backlog1Sprint1.md)
 ## Setting Up L-ISA 
@@ -128,18 +128,28 @@ fader.py
 ```
 
 
-3. Edit the **IP Address and Port Number** (`line 43 and 44`) of the **computer** running **L-ISA Controller** in `fader.py`
+3. Edit the **IP Address and Port Number** (`line 43 and 44`) of the **computer** running **L-ISA Controller** in `fader.py`<br>
+(This is <b>Important</b> becuase this is how the Raspberry Pi sends MIDI Data via OSC into L-ISA Controller. <b>A Crucial Part of Our Game</b>)
 ```
 LAPTOP_IP = "192.168.254.30"		
 PORT = 8880                
 ```
-( Note that L-ISA Controller Port Number is Always `8880`) 
+( Note that L-ISA Controller Port Number is Always `8880`) <br>
 
 
-4. Execute `fader.py`. If the file is executed successfully; Turning the Configured Knob on the MIDI Controller will make the Source `pan` in L-ISA Controller
+
+4. Execute `fader.py`.<br> If the file is executed successfully; Turning the Configured Knob on the MIDI Controller will make the Source 1 `pan` in L-ISA Controller
 ```
 python3 fader.py
 ```
 
+
 ## -MIDI Controller to L-ISA Configuration is Now Complete-
+
+
+
+
+
+
+
 
