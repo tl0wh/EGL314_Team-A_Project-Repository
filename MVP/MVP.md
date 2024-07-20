@@ -7,6 +7,11 @@
  <i align="center">Minimum Viable Product Presentation for The BlindFold Challenge ( Team A ) </i>
 </p>
 
+# Explanations
+- **[GameGui](./Game_GUI/GUI.md)** - Explanation of GUI
+- **[Laser](./Laser_Modules/Laser.md)** - Setup and explanation of Laser 
+- **[Neopixel](./Neopixel/NeoPixel.md)** - Setup and explanation of Neopixel 
+
 # System Flowchart (Main Setup)
 ```mermaid
 graph TD
@@ -22,13 +27,24 @@ H -- Speaker Cable to 4 Way EuroBlock Terminal Block--> I[Speakers<br> Yamaha VX
 K[MIDI Controller<br>Korg Nano Controller]--MiniUSB to USB A <br> & MIDI-->J[Raspberry Pi B]
 J[Raspberry Pi B]<--OSC-->F[L-ISA Controller] 
 ```
+# System Flowchart (Laser Module Setup)
+```mermaid
+graph TD
+A[Laptop] --> B[Raspberry Pi Server]
+B --> C[Slave Pi]
+C --> D[Relay]
+D --> D1[Laser Module 1]
+D --> D2[Laser Module 2]
+```
+
 # System Flowchart (NeoPixel Setup)
 ```mermaid
 graph TD
 Z[Raspberry Pi C ]<--WiFi + OSC--> Y[User Laptop] 
 Z<--Dupont(F)<-> XLR(F) to XLR(M) to Dupont(M)(Soldered)-->X[Neo Pixel LED Strip]
-
 ```
+\
+
 ## Asset Files:
 There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Digital Audio Workstation Reaper(.rpp) ShowFiles<br> Located in Asset_Files in [MVP](./Asset_Files/)
 <br>

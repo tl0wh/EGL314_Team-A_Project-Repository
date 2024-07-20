@@ -8,8 +8,9 @@ Laser
 graph TD
 A[Laptop] --> B[Raspberry Pi Server]
 B --> C[Slave Pi]
-C --> D1[Laser Module 1]
-C --> D2[Laser Module 2]
+C --> D[Relay]
+D --> D1[Laser Module 1]
+D --> D2[Laser Module 2]
 ```
 
 ##
