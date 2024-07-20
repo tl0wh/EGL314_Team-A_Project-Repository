@@ -95,6 +95,11 @@ Relevant Audio Effetcs are also located in [Audio_Files](./MVP/Audio_Files/)<br>
 
 - **[Backlog 2 Sprint 1](./Backlog%202%20Sprint%201/Backlog2Sprint1.md)** - OSC Reaper Combined. GUI For Control
 
+- **[Backlog 2 Sprint 2]** - GrandMA. GUI for all three combined
+
+- **[POC](./POC/POC.md)** - Creation of the Controller, Master and Participant GUI. Assets and Audios
+
+- **[MVP](./MVP/MVP.md)** - Improvements on everything with the addition of Neopixel and Laser modules
 
 
 
