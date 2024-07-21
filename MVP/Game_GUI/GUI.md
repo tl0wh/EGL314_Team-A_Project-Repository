@@ -10,6 +10,7 @@
 <h2 align="center">
   Operational Guide for GUIs in Game
 </h2>
+<b>This Section Requires [Reaper](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%202%20Sprint%201/Backlog2Sprint1.md) and [MA3](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%201%20Sprint%201/GrandMA3_OSC_setupguide.pdf) OSC Configuration to be done</b>
 In this game , there will be <u><b>2</b> GUIs.</u><br>
 <b>Note that: 1 Laptop has to be deployed for Each GUI</b>
 
