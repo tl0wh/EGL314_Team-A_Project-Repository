@@ -30,11 +30,11 @@ J[Raspberry Pi B]<--OSC-->F[L-ISA Controller]
 # System Flowchart (Laser Module Setup)
 ```mermaid
 graph TD
-A[Laptop] --> B[Raspberry Pi Server]
-B --> C[Slave Pi]
-C --> D[Relay]
-D --> D1[Laser Module 1]
-D --> D2[Laser Module 2]
+A[Laptop] --Wifi--> B[Raspberry Pi Server]
+B --Wifi--> C[Slave Pi]
+C --Physical GPIO Connections--> D[Relay]
+D --Soldered Dupont Cables--> D1[Laser Module 1]
+D --Soldered Dupont Cables--> D2[Laser Module 2]
 ```
 
 # System Flowchart (NeoPixel Setup)
@@ -43,7 +43,7 @@ graph TD
 Z[Raspberry Pi C ]<--WiFi + OSC--> Y[User Laptop] 
 Z<--Dupont(F)<-> XLR(F) to XLR(M) to Dupont(M)(Soldered)-->X[Neo Pixel LED Strip]
 ```
-\
+
 
 ## Asset Files:
 There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Digital Audio Workstation Reaper(.rpp) ShowFiles<br> Located in Asset_Files in [MVP](./Asset_Files/)
