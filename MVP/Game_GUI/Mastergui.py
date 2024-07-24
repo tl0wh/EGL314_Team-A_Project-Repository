@@ -144,13 +144,7 @@ def seq23():
         addrs = "/gma3/cmd"
 
 
-        PI_A_ADDR = "192.168.254.30"		# wlan ip
-        PORT = 8000
-        addr = "/action/41251" # Jump to Marker
-        msg = float(1)
-
         send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
-        send_message1(PI_A_ADDR, PORT, addr, msg)
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 23")
 
     print("This is sequence 23")
