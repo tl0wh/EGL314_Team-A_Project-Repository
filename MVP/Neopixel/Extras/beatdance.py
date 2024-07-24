@@ -17,9 +17,9 @@ def send_off_message(receiver_ip, receiver_port):
 PI_A_ADDR = "192.168.254.242"  # Change to your RPi's IP address
 PORT = 2005
 
-bpm = 62
+bpm = 120
 beat_delay = 60 / bpm
-total_duration = 30  
+total_duration = 10
 end_time = time.time() + total_duration
 
 colors = [

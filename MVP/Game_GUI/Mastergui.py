@@ -394,7 +394,20 @@ def seq32():
 
     print("This is sequence 32")
 
+def flash():
+         #MA3
+    if __name__ == "__main__":
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
+        PORTS = 8888                     # laptop w grandMA3 port number
+        addrs = "/gma3/cmd"
 
+        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
+        send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 10")
+
+
+
+
+    print("FLASHED!")
 
 
 
@@ -428,6 +441,8 @@ seq31 = tk.Button(main, text="Demo Stage", font="20", command=seq31, background=
 
 seq32 = tk.Button(main, text="Sequence 32", font="20", command=seq32, background= "Orange")
 
+flash = tk.Button(main, text="Flashbang", font="20", command=flash, background= "Orange")
+
 
 
 
@@ -452,7 +467,7 @@ seq31.grid(row=2, column=6, columnspan=2, pady=10, padx=10)
 
 seq32.grid(row=3, column=6, columnspan=2, pady=10, padx=10)
 
-
+flash.grid(row=3, column=9, columnspan=2, pady=10, padx=10)
 
 
 
@@ -475,6 +490,8 @@ seq30.config(height=6, width=12)
 seq31.config(height=6, width=12)
 
 seq32.config(height=6, width=12)
+
+flash.config(height=6, width=12)
 
 
 
