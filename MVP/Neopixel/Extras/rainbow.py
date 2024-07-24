@@ -1,47 +1,70 @@
-from pythonosc import udp_client
-import colorsys
+import board
+import neopixel
 import time
+import random
 
-# UDP client setup
-receiver_ip = "192.168.254.242"  # Change to your RPi's IP address
-receiver_port = 2005
-client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+# Define constants
+NUM_PIXELS = 170
+PIN_STRIP1 = board.D18
+MAX_BRIGHTNESS = 0.5
+METEOR_COLOR = (255, 0, 0)  # Red
+BOUNCE_COLOR = (0, 255, 0)  # Green
+BACKGROUND_COLOR = (0, 0, 0)  # Off
 
-# Function to send pixel color via UDP
-def send_pixel_color(pixel_index, r, g, b):
-    address = f"/color/{pixel_index}"
-    client.send_message(address, [r, g, b])
+# Create a NeoPixel object
+pixels_strip1 = neopixel.NeoPixel(PIN_STRIP1, NUM_PIXELS, auto_write=False)
 
-# Function to create a rainbow color wheel (similar to the Neopixel example)
-def wheel(pos):
-    if pos < 0 or pos > 255:
-        return (0, 0, 0)
-    if pos < 85:
-        return (255 - pos * 3, pos * 3, 0)
-    elif pos < 170:
-        pos -= 85
-        return (0, 255 - pos * 3, pos * 3)
-    else:
-        pos -= 170
-        return (pos * 3, 0, 255 - pos * 3)
+def clear_strip():
+    pixels_strip1.fill(BACKGROUND_COLOR)
+    pixels_strip1.show()
 
-# Function to display a rainbow cycle using UDP messages
-def rainbow_cycle_udp(num_pixels, wait):
-    for j in range(255):
-        for i in range(num_pixels):
-            pixel_index = (i * 256 // num_pixels) + j
-            r, g, b = wheel(pixel_index & 255)
-            send_pixel_color(i, r, g, b)
-        time.sleep(wait)
+def meteor_effect(duration=10):
+    start_time = time.time()
+    while time.time() - start_time < duration:
+        for i in range(NUM_PIXELS):
+            # Clear strip and set meteor
+            clear_strip()
+            pixels_strip1[i] = METEOR_COLOR
+            if i > 0:
+                pixels_strip1[i - 1] = METEOR_COLOR
+            if i < NUM_PIXELS - 1:
+                pixels_strip1[i + 1] = METEOR_COLOR
+            pixels_strip1.show()
+            time.sleep(0.05)
+        # Move meteor down the strip
+        pixels_strip1.fill(BACKGROUND_COLOR)
 
-# Example usage
-NUM_PIXELS = 200  # Change to match the number of NeoPixels on your strip
+def bouncing_light_effect(duration=10):
+    start_time = time.time()
+    direction = 1
+    position = 0
+    while time.time() - start_time < duration:
+        # Clear strip and set bouncing light
+        clear_strip()
+        pixels_strip1[position] = BOUNCE_COLOR
+        pixels_strip1.show()
+        time.sleep(0.05)
+        
+        # Update position
+        if position == 0 or position == NUM_PIXELS - 1:
+            direction *= -1
+        position += direction
 
-try:
-    while True:
-        # Display the rainbow cycle via UDP
-        rainbow_cycle_udp(NUM_PIXELS, 0.01)
+def light_show():
+    clear_strip()
+    
+    # Run meteor effect for 15 seconds
+    meteor_effect(duration=15)
+    
+    # Run bouncing light effect for 15 seconds
+    bouncing_light_effect(duration=15)
+    
+    # Turn off the strip
+    clear_strip()
 
-except KeyboardInterrupt:
-    # Clean up or handle interruption
-    pass
+if __name__ == "__main__":
+    try:
+        light_show()
+    except KeyboardInterrupt:
+        clear_strip()
+        print("Light show interrupted.")
