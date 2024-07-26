@@ -79,10 +79,17 @@ def Pause():
     PI_A_ADDR = "192.168.254.30"    # Reaper's IP address
     PORT = 8000
 
+    PI_A_ADDR = "192.168.254.30"		# wlan ip
+    PORT = 8000
+
+    addr2 = "/action/40044" # Play/Stop Function in Reaper
+    msg = float(1) # Trigger TRUE Value
+
+    send_message3(PI_A_ADDR, PORT, addr2, msg)
 
 
-    send_message1(PI_A_ADDR, PORT, addr, msg)
-    send_message3(PI_A_ADDR, PORT, addr2, msg2)
+    print("play pause")
+
 
 main = tk.Tk()
 
