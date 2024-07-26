@@ -72,21 +72,40 @@ def off():
 def seq():
     subprocess.Popen(["python", "./MVP/Laser_Modules/test.py"])
 
+def offneo():
+    subprocess.Popen(["python", "./MVP/Laser_Modules/Neooff.py"])
+
+def Pause():
+    PI_A_ADDR = "192.168.254.30"    # Reaper's IP address
+    PORT = 8000
+
+
+
+    send_message1(PI_A_ADDR, PORT, addr, msg)
+    send_message3(PI_A_ADDR, PORT, addr2, msg2)
+
 main = tk.Tk()
 
 on_button = tk.Button(main, text="On", font="20", command=on, background="Orange")
 off_button = tk.Button(main, text="Off", font="20", command=off, background="Orange")
 seq_button = tk.Button(main, text="Seq", font="20", command=seq, background="Orange")
 show_button = tk.Button(main, text="Show", font="20", command=show, background="Orange")
+Offneo = tk.Button(main, text="Off Neo", font="20", command=offneo, background="Orange")
+Pause2 = tk.Button(main, text="Pause", font="20", command=Pause, background="Orange")
 
 on_button.grid(row=1, column=0, columnspan=2, pady=10, padx=10)
 off_button.grid(row=1, column=3, columnspan=2, pady=10, padx=10)
 seq_button.grid(row=2, column=0, columnspan=2, pady=10, padx=10)
 show_button.grid(row=2, column=3, columnspan=2, pady=10, padx=10)
+Offneo.grid(row=3, column=0, columnspan=2, pady=10, padx=10)
+Pause2.grid(row=3, column=3, columnspan=2, pady=10, padx=10)
+
 
 on_button.config(height=6, width=12)
 off_button.config(height=6, width=12)
 seq_button.config(height=6, width=12)
 show_button.config(height=6, width=12)
+Offneo.config(height=6, width=12)
+Pause2.config(height=6, width=12)
 
 main.mainloop()

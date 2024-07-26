@@ -38,20 +38,7 @@ def send_off():
 
 if __name__ == "__main__":
     try: #type your code here
-        colors = [(255, 0, 0)] * 57 + [(0, 255, 0)] * 56 + [(0, 0, 255)] * 57  # Red, Green, Blue sections
-        send_color_array(colors)
-        time.sleep(1)
-
-        send_brightness(0.05)
-        time.sleep(1)
-        send_brightness(0.6)
-        time.sleep(1)
-
-        colors = [(0, 0, 0)] * 57 + [(0, 255, 0)] * 56 + [(0, 0, 0)] * 57 
-        send_color_array(colors)
-        time.sleep(0.5)
         send_off()
 
     except Exception as e:
         print(f"Error: {e}")
-Here is the new client code for the Neopixel
