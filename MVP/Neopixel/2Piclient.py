@@ -6,8 +6,8 @@ SERVER_IP = "192.168.254.242"  # Change to your RPi's IP address
 SERVER_PORT = 2005
 
 #Set the IP and port for the second pi
-SERVER_IP2 =   # Change to your RPi's IP address
-SERVER_PORT2 = 
+SERVER_IP2 = "192.168.1.15"  # Change to your RPi's IP address
+SERVER_PORT2 = 2005
 
 # Create an OSC client
 client = udp_client.SimpleUDPClient(SERVER_IP, SERVER_PORT)
@@ -60,18 +60,18 @@ def send_off2():
 if __name__ == "__main__":
     try: #type your code here
         colors = [(255, 0, 0)] * 57 + [(0, 255, 0)] * 56 + [(0, 0, 255)] * 57  # Red, Green, Blue sections
-        send_color_array(colors)
+        send_color_array2(colors)
         time.sleep(1)
 
-        send_brightness(0.05)
+        send_brightness2(0.05)
         time.sleep(1)
-        send_brightness(0.6)
+        send_brightness2(0.6)
         time.sleep(1)
 
         colors = [(0, 0, 0)] * 57 + [(0, 255, 0)] * 56 + [(0, 0, 0)] * 57 
-        send_color_array(colors)
+        send_color_array2(colors)
         time.sleep(0.5)
-        send_off()
+        send_off2()
 
     except Exception as e:
         print(f"Error: {e}")
