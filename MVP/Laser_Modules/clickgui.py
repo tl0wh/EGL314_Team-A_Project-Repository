@@ -59,7 +59,7 @@ def show():
     send_message1(PI_A_ADDR, PORT, addr, msg)
     send_message3(PI_A_ADDR, PORT, addr2, msg2)
 
-    print("Playing Freebird")
+    print("Playing Overtaken")
 
     run_subprocesses()
 
