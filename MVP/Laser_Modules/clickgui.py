@@ -18,6 +18,18 @@ def send_message3(receiver_ip, receiver_port, address, message):
     except Exception as e:
         print(f"Error sending message: {e}")
 
+def send_message4(receiver_ip, receiver_port, address, message):
+	try:
+		# Create an OSC client to send messages
+		client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
+
+		# Send an OSC message to the receiver
+		client.send_message(address, message)
+
+		print("MA3 sent successfully.")
+	except:
+		print("MA3 not sent")
+
 def send_color(receiver_ip, receiver_port, r, g, b):
     try:
         client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
@@ -42,6 +54,21 @@ def send_off_message(receiver_ip, receiver_port):
     except Exception as e:
         print(f"Error sending off message: {e}")
 
+def seq32():
+    #MA3
+    if __name__ == "__main__":
+        LAPTOP_IP = "192.168.254.229"		# send to laptop w grandMA3
+        PORTS = 8888                     # laptop w grandMA3 port number
+        addrs = "/gma3/cmd"
+
+        send_message4(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
+        send_message4(LAPTOP_IP, PORTS, addrs, "Go Sequence 32")
+
+
+
+
+    print("This is sequence 32")
+
 def run_subprocesses():
     subprocess.Popen(["python", "./MVP/Laser_Modules/LaserShowHardCode.py"])
     subprocess.Popen(["python", "./MVP/Laser_Modules/beatdance.py"])
@@ -62,6 +89,7 @@ def show():
     print("Playing Overtaken")
 
     run_subprocesses()
+    seq32()
 
 def on():
     subprocess.Popen(["python", "./MVP/Laser_Modules/test_AllOn.py"])
