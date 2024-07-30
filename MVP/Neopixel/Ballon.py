@@ -64,8 +64,8 @@ def handle_off_message():
     set_pixels_color_array(pixels_strip1, [(0, 0, 0)] * NUM_PIXELS, 0)
 
 # OSC server setup
-RECEIVER_IP = "192.168.254.242"  # Change to your RPi's IP address
-RECEIVER_PORT = 2005
+RECEIVER_IP = ""  # Change to your RPi's IP address
+RECEIVER_PORT = 
 
 dispatcher = dispatcher.Dispatcher()
 dispatcher.map("/color_array", handle_osc_message)

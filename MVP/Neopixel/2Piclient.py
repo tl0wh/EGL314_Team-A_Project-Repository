@@ -5,11 +5,17 @@ import time
 SERVER_IP = "192.168.254.242"  # Change to your RPi's IP address
 SERVER_PORT = 2005
 
+#Set the IP and port for the second pi
+SERVER_IP2 = "192.168.254.102"  # Change to your RPi's IP address
+SERVER_PORT2 = 2006
+
 # Create an OSC client
 client = udp_client.SimpleUDPClient(SERVER_IP, SERVER_PORT)
+client2 = udp_client.SimpleUDPClient(SERVER_IP2, SERVER_PORT2)
 
 ################################# Functions DO NOT TOUCH!!!!############################################################################
 
+# Truss Neopixel
 def send_color_array(colors):
     address = "/color_array"
     flattened_colors = [color for rgb in colors for color in rgb]
@@ -22,6 +28,21 @@ def send_brightness(brightness):
 
 def send_off():
     client.send_message("/off", [])
+    print("Sent off message")
+
+# Ballon Neopixel
+def send_color_array2(colors):
+    address = "/color_array"
+    flattened_colors = [color for rgb in colors for color in rgb]
+    client2.send_message(address, flattened_colors)
+    print(f"Sent color array: {flattened_colors}")
+
+def send_brightness2(brightness):
+    client2.send_message("/brightness", brightness)
+    print(f"Sent brightness {brightness}")
+
+def send_off2():
+    client2.send_message("/off", [])
     print("Sent off message")
 
 ####################################################################################################
@@ -39,19 +60,20 @@ def send_off():
 if __name__ == "__main__":
     try: #type your code here
         colors = [(255, 0, 0)] * 57 + [(0, 255, 0)] * 56 + [(0, 0, 255)] * 57  # Red, Green, Blue sections
+        send_color_array2(colors)
         send_color_array(colors)
         time.sleep(1)
 
-        send_brightness(0.05)
+        send_brightness2(0.05)
         time.sleep(1)
-        send_brightness(0.6)
+        send_brightness2(0.6)
         time.sleep(1)
 
         colors = [(0, 0, 0)] * 57 + [(0, 255, 0)] * 56 + [(0, 0, 0)] * 57 
-        send_color_array(colors)
+        send_color_array2(colors)
         time.sleep(0.5)
+        send_off2()
         send_off()
 
     except Exception as e:
         print(f"Error: {e}")
-Here is the new client code for the Neopixel

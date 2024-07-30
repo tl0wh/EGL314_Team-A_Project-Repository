@@ -1,5 +1,4 @@
 import mido
-import subprocess
 from pythonosc import udp_client
 
 def list_midi_devices():
@@ -13,22 +12,17 @@ def list_midi_devices():
 
 def open_nano_kontrol2():
     """Opens the nanoKONTROL2 device and listens for control change messages."""
-    # Replace this with the exact name of your nanoKONTROL2 input port
-    # if it's different from what's listed below.
     nano_kontrol2_name = "nanoKONTROL2:nanoKONTROL2 nanoKONTROL2 _ CTR 28:0"
 
-    # Check if the nanoKONTROL2 is in the list of input names
     if nano_kontrol2_name not in mido.get_input_names():
         print(f"Device {nano_kontrol2_name} not found. Please check the device name.")
         return
 
-    # Open the input port for the nanoKONTROL2
     with mido.open_input(nano_kontrol2_name) as inport:
         print(f"Listening to {nano_kontrol2_name} for control changes...")
         try:
             for msg in inport:
                 if msg.type == 'control_change':
-                    # Print out the control number and its value (fader/knob position)
                     print(f'Control: {msg.control}, Value: {msg.value}')
                     if msg.control == 16:
                         print("It works")
@@ -39,29 +33,30 @@ def open_nano_kontrol2():
 def send_osc_message(value):
     """Send OSC message to control L-ISA."""
     try:
-        # IP address and port of the receiving Raspberry Pi
         PI_A_ADDR = "192.168.254.30"  # wlan ip
         PORT = 8880
-        A = value - 30
 
-        if A > 30:
-            addr = "/ext/src/1/p"
-            msg = float(A) / 127  
-            client = udp_client.SimpleUDPClient(PI_A_ADDR, PORT)
-            client.send_message(addr, msg)
-            print("OSC Message sent successfully.")
+        # Map the MIDI value to the OSC value
+        if value >= 64:
+            # 127 to 64 maps from 0.75 to 0.25
+            msg = 0.75 - (0.5 / 63) * (127 - value)
+        elif value >= 32:
+            # 63 to 32 maps from 0.24 to 0
+            msg = 0.24 - (0.24 / 31) * (63 - value)
         else:
-            B = A + 97
-            addr = "/ext/src/1/p"
-            msg = float(B) / 127  
-            client = udp_client.SimpleUDPClient(PI_A_ADDR, PORT)
-            client.send_message(addr, msg)
-            print("OSC Message sent successfully.")
+            # 31 to 0 maps from 1 to 0.76
+            msg = 1 - (0.24 / 31) * (31 - value)
+        
+        # Ensure the message is within the range [0, 1]
+        msg = max(0, min(1, msg))
+
+        addr = "/ext/src/1/p"
+        client = udp_client.SimpleUDPClient(PI_A_ADDR, PORT)
+        client.send_message(addr, msg)
+        print(f"OSC Message sent successfully with value: {msg}")
 
     except Exception as e:
         print("Error sending OSC message:", e)
-
-
 
 if __name__ == "__main__":
     # Uncomment the next line if you want to list all available MIDI devices
