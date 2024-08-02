@@ -411,7 +411,7 @@ def window():
         addrs = "/gma3/cmd"
 
         send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
-        send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 8")
+        send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 15")
 
 
 
@@ -452,7 +452,7 @@ seq32 = tk.Button(main, text="Sequence 32", font="20", command=seq32, background
 
 flash = tk.Button(main, text="Flashbang", font="20", command=flash, background= "Orange")
 
-window = tk.Button(main, text="Window", font="20", command=window, background= "Orange")
+window = tk.Button(main, text="Haze", font="20", command=window, background= "Orange")
 
 
 
