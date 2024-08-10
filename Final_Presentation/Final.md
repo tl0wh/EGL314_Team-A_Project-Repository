@@ -49,12 +49,10 @@ V<--Dupont(F)<-> XLR(F) to XLR(M) to Dupont(M)(Soldered)-->J[Neo Pixel LED Strip
 
 
 ## Asset Files:
-There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Digital Audio Workstation Reaper(.rpp) ShowFiles<br> Located in Asset_Files in [MVP](./Asset_Files/)
+There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Digital Audio Workstation Reaper(.rpp) ShowFiles<br> Located in Asset_Files in [Final_Presentation](./Asset_Files/)
 <br>
 <br>
-As for Audio files, It is all located inside [Audio_files\Sfx](./Audio_Files/) Folder<br>
-To be imported into Reaper
-
+All Reaper Tracks are stored in a Google Drive Folder, Please download it & import from  [here](https://drive.google.com/drive/folders/14TApmUq5dqAvjpffWG6sb7XUN88K3qw8?usp=drive_link)
 ### Required Software:
 - [Reaper DAW](https://www.reaper.fm/download.php)
 - [grandMA3 on PC](https://www.malighting.com/downloads/products/grandma3/) (If you have a console , this is optional)
