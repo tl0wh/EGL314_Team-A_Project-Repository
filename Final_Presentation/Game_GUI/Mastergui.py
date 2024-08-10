@@ -432,21 +432,21 @@ def window():
 
 seq23 = tk.Button(main, text="Murugan Light", font="20", command=seq23 , background="Orange")
 
-seq24 = tk.Button(main, text="Intro+SS 11", font="20", command=seq24, background= "Orange")
+seq24 = tk.Button(main, text="Intro+SS 11", font="20", command=seq24, background= "Blue")
 
-seq25 = tk.Button(main, text="Map+SS 15", font="20", command=seq25, background= "Orange")
+seq25 = tk.Button(main, text="Map+SS 15", font="20", command=seq25, background= "Pink")
 
-seq26 = tk.Button(main, text="Lvl2+SS 16", font="20", command=seq26, background= "Orange")
+seq26 = tk.Button(main, text="Lvl2+SS 16", font="20", command=seq26, background= "Pink")
 
-seq27 = tk.Button(main, text="Lose+SS 14", font="20", command=seq27, background= "Orange")
+seq27 = tk.Button(main, text="Lose+SS 14", font="20", command=seq27, background= "Red")
 
-seq28 = tk.Button(main, text="Clear#2+SS 13", font="20", command=seq28, background= "Orange")
+seq28 = tk.Button(main, text="Clear#2+SS 13", font="20", command=seq28, background= "Green")
 
-seq29 = tk.Button(main, text="Outro+SS 12", font="20", command=seq29, background= "Orange")
+seq29 = tk.Button(main, text="Outro+SS 12", font="20", command=seq29, background= "Blue")
 
 seq30 = tk.Button(main, text="smoke#2", font="20", command=seq30, background= "Orange")
 
-seq31 = tk.Button(main, text="Demo Stage", font="20", command=seq31, background= "Orange")
+seq31 = tk.Button(main, text="Demo Stage", font="20", command=seq31, background= "Pink")
 
 seq32 = tk.Button(main, text="Sequence 32", font="20", command=seq32, background= "Orange")
 

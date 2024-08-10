@@ -1,14 +1,14 @@
 <h1 align="center">
-  Minimum Viable Product 
+  Final Presentation
 </h1>
 
 <p align="center">
 
- <i align="center">Minimum Viable Product Presentation for The BlindFold Challenge ( Team A ) </i>
+ <i align="center">Final Presentation for The BlindFold Challenge ( Team A ) </i>
 </p>
 
 <h2 align="center">
-  Operational Guide for GUIs in Game
+  Operational Guide for GUIs in Game with Quality of Life (QOL) Changes
 </h2>
 <b>This Section Requires [Reaper](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%202%20Sprint%201/Backlog2Sprint1.md) and [MA3](https://github.com/tl0wh/EGL314_Team-A_Project-Repository/blob/main/Backlog%201%20Sprint%201/GrandMA3_OSC_setupguide.pdf) OSC Configuration to be done</b>
 In this game , there will be <u><b>2</b> GUIs.</u><br>
@@ -26,42 +26,43 @@ D[Raspberry Pi / Laptop<br> Running <b>Participant</b> GUI]<--Wifi-->B
 D<--Wifi-->C 
 ```
 <h3>1. Master GUI for Operational Team <br></h3>
-<img src="../diagrams/Master_GUI.png" > <br>
+<h4><u>Buttons are now colour coded for ease of identification for Operational Team.</u></h4>
+<img src="../diagrams/Master_GUI_QOL.png" > <br>
 <h3>2. GUI for Participant<br></h3>
 <img src="../diagrams/PlayerGUI_Start.png" > <br>
 <img src="../diagrams/pgui_main.png" > <br>
 <img src="../diagrams/pgui_end.png" > <br>
 
 ## Breaking Down Operational GUI:
-<img src="../diagrams/Master_GUI_Annotated.png">
+<img src="../diagrams/Master_GUI_Annotated_QOL.png">
 
 ### This is the Master GUI.<br> Each button will be tied to 2 different functions;<br> 1 to fire sequences in MA3<br> 1 to fire Audio in Reaper
 ## Components
 ### - In the <u>Red</u>
-<img src="../diagrams/Mgui-red.png"></img>
+<img src="../diagrams/Mgui-red_QOL.png"></img>
 - `Murugan Light`<br>
 -Bring Guests to our Station
 - `Intro` <br>
--Voiced Over Game Introduction
+-Voiced Over Game Introduction (<b>Intro & Outro Colour-coded Blue</b>)
 - `Outro` <br> 
--Voice Over Concluding Station
+-Voice Over Concluding Station (<b>Intro & Outro Colour-coded Blue</b>)
 
 ### - In the <u>Blue</u>
-<img src="../diagrams/Mgui_blue.png"></img>
+<img src="../diagrams/Mgui_blue_QOL.png"></img>
 - `Demo Stage`<br>
--Demonstration Level of Game
+-Demonstration Level of Game  (<b>All stages of game are colour coded Pink</b>)
 - `Map`<br>
- -Level 1 Easy Stage of Game
+ -Level 1 Easy Stage of Game (<b>All stages of game are colour coded Pink</b>)
 - `Lvl2`<br>
- -Level 2 Hard Stage of Game
+ -Level 2 Hard Stage of Game (<b>All stages of game are colour coded Pink</b>)
 
 ### - In the <u>Green</u>
-<img src="../diagrams/Mgui_green.png"></img>
+<img src="../diagrams/Mgui_green_QOL.png"></img>
 - `Lose`<br>
--Fired when Ninja 1 <b>Loses</b>
+-Fired when Ninja 1 <b>Loses</b> (<b>Losing is colour coded Red</b>)
 
 - `Clear`<br>
--Fired when Ninja 1 <b>Advances</b>
+-Fired when Ninja 1 <b>Advances</b> (<b>Clear is colour coded Green6</b>)
 
 
 - `Sequence 32`<br>
