@@ -14,8 +14,8 @@ V<--Dupont(F)<-> XLR(F) to XLR(M) to Dupont(M)(Soldered)-->J[Neo Pixel LED Strip
 ```
 
 ### Required Equipment:
-- Raspberry Pi
-- Neopixel Strip
+- 2 Raspberry Pi
+- 2 Neopixel Strip
 - Jumper wires
 - XLR Connectors (Optional)
 - Laptop with Python
@@ -33,7 +33,7 @@ V<--Dupont(F)<-> XLR(F) to XLR(M) to Dupont(M)(Soldered)-->J[Neo Pixel LED Strip
 
 ## Software
 
-1. Turn on Raspberry PI
+1. Turn on both the Raspberry PI
 
 2. Make sure the to configure the Raspberry Pi date to the current date
 
@@ -58,24 +58,40 @@ V<--Dupont(F)<-> XLR(F) to XLR(M) to Dupont(M)(Soldered)-->J[Neo Pixel LED Strip
     ```
     dtparam=audio=off
     ```
-5. Create the file Server.py, paste Serverupdated.py in it and run it
-    ```
-    sudo python3 Serverupdated.py
-    ```
-6. In serverupdated.py change the IP address to your IP and choose a Port
+6. Repeat the same steps for the second Raspberry PI C and D
+7. In Raspiberry Pi C, in serverupdated.py change the IP address to your IP and choose a Port
     ```
     # OSC server setup
     receiver_ip = "192.168.254.242"  # Change to your RPi's IP address
     receiver_port = 2005
     ```
-7. Open your laptop and Run visual studio code
-8. Download Client.py
-9. In Client.py change the IP address to your Pi's address and port( The same that you did in #6)
+8. Now do the same for Raspberry Pi D but <b>make sure<b> that for Raspberry Pi's have different port number
     ```
-    # FOR INFO: IP address and port of the receiving Raspberry Pi 
-    PI_A_ADDR = "192.168.254.242"  # Change to your RPi's IP address
-    PORT = 2005
+    # OSC server setup
+    receiver_ip = "192.168.254.242"  # Change to your RPi's IP address
+    receiver_port = 2005
+    ```
+    ```
+    # OSC server setup
+    receiver_ip = "192.168.254.102"  # Change to your RPi's IP address
+    receiver_port = 2006
     ```
 
+5. Create the file Server.py, paste Serverupdated.py in it and run it
+    ```
+    sudo python3 Serverupdated.py
+    ```
+7. Open your laptop and Run visual studio code
+8. Download 2Piclient.py
+9. In 2Piclient.py change the IP address to your Pi's address and port( The same that you did in #7)
+```
+SERVER_IP = "192.168.254.242"  # Change to your RPi's IP address
+SERVER_PORT = 2005
+
+#Set the IP and port for the second pi
+SERVER_IP2 = "192.168.254.102"  # Change to your RPi's IP address
+SERVER_PORT2 = 2006
+```
+12. Now run the python code and enjoy your lightshow
 ## -Neopixel control through open sound command is now complete-
 

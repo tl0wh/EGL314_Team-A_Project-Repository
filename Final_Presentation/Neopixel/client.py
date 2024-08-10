@@ -54,4 +54,3 @@ if __name__ == "__main__":
 
     except Exception as e:
         print(f"Error: {e}")
-Here is the new client code for the Neopixel
