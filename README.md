@@ -93,13 +93,13 @@ There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Co
 
 - **[Backlog 2 Sprint 1](./Backlog%202%20Sprint%201/Backlog2Sprint1.md)** - OSC Reaper Combined. GUI For Control
 
-- **[Backlog 2 Sprint 2](./Backlog%202%20Sprint%201/Backlog2Sprint1.md)** - OSC Reaper & MA3 Combined. GUI For Control
+- **[Backlog 2 Sprint 2](./Backlog2Sprint2/Backlog2Sprint2.md)** - OSC Reaper & MA3 Combined. GUI For Control
 
-- **[POC](./Backlog2Sprint2/Backlog2Sprint2.md)** - Proof Of Concept
+- **[POC](./POC/POC.md)** - Proof Of Concept
 
-- **[MVP](./Backlog%202%20Sprint%201/Backlog2Sprint1.md)** - Minimum Viable Project
+- **[MVP](./MVP/MVP.md)** - Minimum Viable Project
 
-- **[Final Presentation](./Backlog%202%20Sprint%201/Backlog2Sprint1.md)** - Final Presentation for Overall Project
+- **[Final Presentation](./Final_Presentation/Final.md)** - Final Presentation for Overall Project
 
 
 
