@@ -95,11 +95,11 @@ There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Co
 
 - **[Backlog 2 Sprint 2](./Backlog2Sprint2/Backlog2Sprint2.md)** - OSC Reaper & MA3 Combined. GUI For Control
 
-- **[POC](./POC/POC.md)** - Proof Of Concept
+- **[POC](./POC/POC.md)** - Proof Of Concept , Initial Presentation of a Working Gameplay
 
-- **[MVP](./MVP/MVP.md)** - Minimum Viable Project
+- **[MVP](./MVP/MVP.md)** - Minimum Viable Project , Refined Gameplay + Introduction of Laser Modules & NeoPixel
 
-- **[Final Presentation](./Final_Presentation/Final.md)** - Final Presentation for Overall Project
+- **[Final Presentation](./Final_Presentation/Final.md)** - Final Presentation for Overall Project with Enhanced Quality of Life changes,Code Changes, Added NeoPixel, Reduced Lasers 
 
 
 
