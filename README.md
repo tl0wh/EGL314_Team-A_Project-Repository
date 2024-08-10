@@ -75,9 +75,7 @@ J[Raspberry Pi B]<--OSC-->F[L-ISA Controller]
 ```
 
 ## Asset Files:
-There will be the Following Files ;<br> Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Dightal Audio Workstation Reaper(.rpp) ShowFiles<br> 
-Located in Asset_Files in [MVP](./MVP/Asset_Files/)<br>
-Relevant Audio Effetcs are also located in [Audio_Files](./MVP/Audio_Files/)<br>
+There will be the Following Files ; Lighting MA3(.show)<br> SoundScape  L-ISA Controller(.lisa)<br>Dightal Audio Workstation Reaper(.rpp) ShowFiles<br> Finalised files are located in Asset_Files in [Final](./Final_presentation/Asset_Files/)
 
 ### Required Software:
 - [Reaper DAW](https://www.reaper.fm/download.php)
@@ -95,11 +93,6 @@ Relevant Audio Effetcs are also located in [Audio_Files](./MVP/Audio_Files/)<br>
 
 - **[Backlog 2 Sprint 1](./Backlog%202%20Sprint%201/Backlog2Sprint1.md)** - OSC Reaper Combined. GUI For Control
 
-- **[Backlog 2 Sprint 2]** - GrandMA. GUI for all three combined
-
-- **[POC](./POC/POC.md)** - Creation of the Controller, Master and Participant GUI. Assets and Audios
-
-- **[MVP](./MVP/MVP.md)** - Improvements on everything with the addition of Neopixel and Laser modules
 
 
 
@@ -110,4 +103,3 @@ Relevant Audio Effetcs are also located in [Audio_Files](./MVP/Audio_Files/)<br>
 
 ### Credits
 Team A Would like to specially thank, **Mr. Fu YongWei** from **Nanyang Polytechnic** for overseeing our project phase and supplying us with base-source codes.
-
