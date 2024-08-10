@@ -16,9 +16,10 @@ D --Soldered Dupont Cables--> D2[Laser Module 2]
 
 ##
 # Hardware
+### Setup has been modified since MVP
 1. 5 Raspberry Pis [4 Slaves , 1 Master]
-2. 24 Laser Modules
-3. 12 Relay
+2. 7 Laser Modules
+3. 4 Relay
 4. Laptop To Program Lasers
 ##
 ## RaspBerry Pi to Laser Wiring
@@ -28,10 +29,11 @@ D --Soldered Dupont Cables--> D2[Laser Module 2]
 ##
 
 ## Speaker & Laser Locations
+### Do note that on each speaker, there are 2 lasers mounted.
 (In Our Case)
 <br>
-<img src ="../diagrams/SpeakerLoc.png"></img>
-##
+<img src ="../diagrams/SpeakerLoc_final.png"></img>
+## 16 lasers have been cut from the original 24. The diagram represents the leftover lasers we are using for our laser show.
 # Software for connecting the server
 
 1. Copy the file osclaser_server.py into your raspberry pi.
@@ -70,10 +72,12 @@ python3 osclaser_server
 
 1. Download the whole Laser_Modules file into your laptop
 2. On your laptop RUN the GUI
-<img src="../diagrams/lasergui.jpg" >
-3. Upon pressing "On" or "Off" it will turn all the laser on or off
-4. Upon Pressing "Seq" it will display a laser show 
-5. Upon pressing "Show" it activates the Reaper(which can be learned more about in [MVP.md](../MVP.md)) to play a music, it shows the same laser sequence as "Seq" and it also shows a light show on the Neopixel(This can be learned more about in [Neopixel.md](../Neopixel/NeoPixel.md))
+<img src="../diagrams/lasergui_final.png" >
+3. Upon pressing `On` or `Off` it will turn all the laser on or off
+4. Upon Pressing `Seq` it will display a laser show 
+5. Upon pressing `Show` it activates the Reaper(which can be learned more about in [Final.md](../Final.md)) to play a music, it shows the same laser sequence as `Seq` and it also shows a light show on the Neopixel(This can be learned more about in [Neopixel.md](../Neopixel/NeoPixel.md))
+6. Upon pressong `Off Neo` it turns off all sequences in the NeoPixlel LED Strip both on the Truss itself & inside the balloon
+7. Upon pressing `Pause` it pauses the playback on Reaper, after our laser show ends.
 
 ### You have learned how the Gui works
 ##

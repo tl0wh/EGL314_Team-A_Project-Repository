@@ -30,8 +30,8 @@ D<--Wifi-->C
 <img src="../diagrams/Master_GUI_QOL.png" > <br>
 <h3>2. GUI for Participant<br></h3>
 <img src="../diagrams/PlayerGUI_Start.png" > <br>
-<img src="../diagrams/pgui_main.png" > <br>
-<img src="../diagrams/pgui_end.png" > <br>
+<img src="../diagrams/pgui_main_QOL.png" > <br>
+<img src="../diagrams/pgui_end_QOL.png" > <br>
 
 ## Breaking Down Operational GUI:
 <img src="../diagrams/Master_GUI_Annotated_QOL.png">
@@ -101,14 +101,18 @@ D<--Wifi-->C
 -Starts Introduction 
 
 ### - In the Main Page
-<img src = "../diagrams/pgui_main.png"></img>
+<img src = "../diagrams/pgui_main_QOL.png"></img>
 - `Replay`<br>
 -Replays Introduction
 - `Start The Game!`<br>
 -Starts Level 1 Easy Stage of Game
+- `Home`<br>
+-Brings GUI back to Starting Page
 
 ### - In the Ending Page
-<img src = "../diagrams/pgui_end.png"></img>
+<img src = "../diagrams/pgui_end_QOL.png"></img>
+- `Page 2`<br>
+-Brings GUI back to the Second Page
 
 ## --Breakdown of Participant GUI is Now Complete--
 

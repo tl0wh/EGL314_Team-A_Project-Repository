@@ -8,7 +8,7 @@
 </p>
 
 # Changes from MVP
-- **[GameGui](./Game_GUI/GUI.md)** - Quality of Life Changes of GUI
+- **[GameGui](./Game_GUI/GUI.md)** - Quality of Life Changes for GUI
 - **[Laser](./Laser_Modules/Laser.md)** - Updated Setup and explanation of Laser 
 - **[Neopixel](./Neopixel/NeoPixel.md)** - Updated Setup and explanation of Neopixel 
 

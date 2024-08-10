@@ -1,4 +1,8 @@
 # System Flowchart (NeoPixel Setup)
+## Changes to NeoPixel Setup:
+### Added a new NeoPixel LED strip inside the balloon, on the Truss<br> Do note that from MVP, a Seperate RaspberryPi & Neo Pixel LED Strip have been added
+#### RaspberryPicC  + LED Strip 1 is for the <b>Truss</b>
+#### RaspberryPi D + LED Strip 2 is for the <b>Balloon</b>
 ```mermaid
 graph TD
 Z[Raspberry Pi C ]<--WiFi + OSC--> Y[User Laptop] 
