@@ -410,7 +410,7 @@ def window():
         PORTS = 8888                     # laptop w grandMA3 port number
         addrs = "/gma3/cmd"
 
-        send_message2(LAPTOP_IP, PORTS, addrs, "Off MyRunningSequence")
+        
         send_message2(LAPTOP_IP, PORTS, addrs, "Go Sequence 15")
 
 
